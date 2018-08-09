@@ -1,0 +1,14 @@
+/*          Author: Richard Myatt
+              Date: 9 August 2018
+
+              Experimenting with SVG
+*/
+
+body {
+  background-color: lightyellow;
+}
+
+.container {
+  width: 400px;
+  margin: 50px auto;
+}

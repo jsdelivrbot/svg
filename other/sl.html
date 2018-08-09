@@ -1,0 +1,41 @@
+<!--          Author: Richard Myatt
+              Date: 9 August 2018
+
+              Experimenting with SVG
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/sl.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG gradient</title>
+</head>
+<body>
+
+  <div class="container">
+    <svg height="150" width="400">
+      <title>SVG gradient demo</title>
+      <desc>A demo based on https://www.w3schools.com/graphics/svg_grad_linear.asp</desc>
+
+       <!-- define the gradient -->
+       <defs>
+         <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+           <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+           <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+         </linearGradient>
+       </defs>
+
+       <!-- draw a beautiful ellipse and add text -->
+       <ellipse cx="200" cy="70" rx="180" ry="55" fill="url(#grad)" />
+       <text x="200" y="86"
+         style="fill: #fff; font-size: 40px; font-family: Roboto, sans-serif; text-anchor: middle;">
+       SoloLearn</text>
+    </svg>
+  </div>
+
+</body>
+</html>
