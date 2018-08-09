@@ -1,0 +1,132 @@
+<!--          Author: Richard Myatt
+              Date: 9 August 2018
+
+              The examples here show the SVG line element and are based on
+              material in chapter 3 of 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/lines.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG lines</title>
+</head>
+<body>
+
+  <h1>SVG lines</h1>
+
+  <br><br>
+
+  <svg class="frame" width="300" height="300" viewBox="0 0 300 300">
+    <title>SVG lines demo</title>
+    <desc>SVG lines demo based on chapter 3 of SVG Essentials</desc>
+
+    <!-- split the area up visually into four parts -->
+    <rect x="0" y="0" width="300" height="300"
+      style="fill: #fff; stroke: blue; stroke-width: 4" />
+    <line x1="0" y1="150" x2="300" y2="150"
+      style="stroke: blue;" />
+      <line x1="150" y1="0" x2="150" y2="300"
+        style="stroke: blue;" />
+
+    <!-- Example 1 lines and stroke width -->
+    <svg x="0" y="0" width="150" height="150" viewBox="0 0 150 150">
+      <!-- diagonal lines -->
+      <line x1="0" y1="0" x2="130" y2="130"
+        style="stroke: black;" />
+      <line x1="40" y1="40" x2="110" y2="110"
+        style="stroke: black; stroke-width: 10;" />
+      <!-- vertical lines -->
+      <line x1="20" y1="0" x2="20" y2="130"
+        style="stroke: black;" />
+      <line x1="20" y1="40" x2="20" y2="110"
+        style="stroke: black; stroke-width: 10;" />
+      <!-- horizontal lines -->
+      <line x1="0" y1="20" x2="130" y2="20"
+        style="stroke: black;" />
+      <line x1="40" y1="20" x2="110" y2="20"
+        style="stroke: black; stroke-width: 10;" />
+      <!-- caption -->
+      <text x="75" y="140"
+        style="fill: darkred; text-anchor: middle;">Example 1</text>
+    </svg>
+
+    <!-- Example 2 - colours -->
+    <svg x="150" y="0" width="150" height="150" viewBox="0 0 150 150">
+      <!-- coloured lines -->
+      <!-- red -->
+      <line x1="50" y1="55" x2="100" y2="55"
+        style="stroke: red; stroke-width: 5;" />
+      <!-- light green -->
+      <line x1="50" y1="65" x2="100" y2="65"
+        style="stroke: #9f9; stroke-width: 5;" />
+      <!-- light blue -->
+      <line x1="50" y1="75" x2="100" y2="75"
+        style="stroke: #9999ff; stroke-width: 5;" />
+      <!-- medium orange -->
+      <line x1="50" y1="85" x2="100" y2="85"
+        style="stroke: rgb(255, 128, 64); stroke-width: 5;" />
+      <!-- deep purple -->
+      <line x1="50" y1="95" x2="100" y2="95"
+        style="stroke: rgb(60%, 20%, 60%); stroke-width: 5;" />
+
+      <!-- caption -->
+      <text x="75" y="140"
+        style="fill: darkred; text-anchor: middle;">Example 2</text>
+    </svg>
+
+    <!-- Example 3 stroke opacity -->
+    <svg x="0" y="150" width="150" height="150" viewBox="0 0 150 150">
+      <!-- lines with varying opacity-->
+      <line x1="50" y1="55" x2="100" y2="55"
+        style="stroke-opacity: 0.2; stroke: black; stroke-width: 5;" />
+      <line x1="50" y1="65" x2="100" y2="65"
+        style="stroke-opacity: 0.4; stroke: black; stroke-width: 5;" />
+      <line x1="50" y1="75" x2="100" y2="75"
+        style="stroke-opacity: 0.6; stroke: black; stroke-width: 5;" />
+      <line x1="50" y1="85" x2="100" y2="85"
+        style="stroke-opacity: 0.8; stroke: black; stroke-width: 5;" />
+      <line x1="50" y1="95" x2="100" y2="95"
+        style="stroke-opacity: 1.0; stroke: black; stroke-width: 5;" />
+
+      <!-- caption -->
+      <text x="75" y="140"
+        style="fill: darkred; text-anchor: middle;">Example 3</text>
+    </svg>
+
+    <!-- Example 4 dasharray -->
+    <svg x="150" y="150" width="150" height="150" viewBox="0 0 150 150">
+      <!-- lines with varying dasharray properties-->
+
+      <!-- nine-pixel dash, five-pixel gap -->
+      <line x1="20" y1="65" x2="130" y2="65"
+        style="stroke-dasharray: 9, 5; stroke: black; stroke-width: 2;" />
+
+      <!-- five-pixel dash, three-pixel gap, nine-pixel dash, two-pixel gap -->
+      <line x1="20" y1="75" x2="130" y2="75"
+        style="stroke-dasharray: 5, 3, 9, 2; stroke: black; stroke-width: 2;" />
+
+      <!-- Odd number of entries is duplicated; this is equivalent to:
+           nine-pixel dash, three-pixel gap, five-pixel dash,
+           nine-pixel gap, three-pixel dash, five-pixel gap -->
+      <line x1="20" y1="85" x2="130" y2="85"
+        style="stroke-dasharray: 9, 3, 5; stroke: black; stroke-width: 2;" />
+
+      <!-- caption -->
+      <text x="75" y="140"
+        style="fill: darkred; text-anchor: middle;">Example 4</text>
+    </svg>
+
+  </svg>
+
+  <br><br>
+
+  <div class="notes">
+    <p>The examples above are based on those in chapter 3 of 'SVG Essentials' by J. David Eisenberg.  Please see accompanying code for each example.</p>
+  </div>
+
+</body>
+</html>

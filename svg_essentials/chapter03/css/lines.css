@@ -1,0 +1,20 @@
+/*          Author: Richard Myatt
+              Date: 9 August 2018
+
+              The examples here show the SVG line element and are based on
+              material in chapter 3 of 'SVG Essentials' by J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+.frame, h1 {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
