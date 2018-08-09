@@ -1,0 +1,18 @@
+/*         Author: Richard Myatt
+           Date: 6 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  Here the svg is specified using explicit units in
+           mm and the rectangle is specified in default units.  Once again the
+           rendering takes care of the conversion.
+*/
+
+svg {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

@@ -1,0 +1,55 @@
+<!--       Author: Richard Myatt
+           Date: 7 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  In this example the aspect ration of the viewport
+           and the viewBox differ and the attribute preserveAspectRatio "none"
+           is used to determine how the image is rendered.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/preserveAR03.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>preserveAspectRatio</title>
+</head>
+<body>
+
+  <h1>SVG - using preserveAspectRatio "none"</h1>
+
+  <br><br>
+
+  <svg width="100" height="300" viewBox="0 0 100 100"
+    preserveAspectRatio="none">
+    <title>Bullseye</title>
+    <desc>Image for testing preserveAspectRatio</desc>
+
+    <circle cx="50" cy="50" r="40" style="stroke: none; fill: green;" />
+    <circle cx="50" cy="50" r="20" style="stroke: none; fill: red;" />
+    <line x1="10" y1="50" x2="90" y2="50" style="stroke: black; stroke-width: 5;" />
+    <line x1="50" y1="10" x2="50" y2="90" style="stroke: black; stroke-width: 5;" />
+  </svg>
+
+  <svg width="300" height="100" viewBox="0 0 100 100"
+    preserveAspectRatio="none">
+    <title>Bullseye</title>
+    <desc>Image for testing preserveAspectRatio</desc>
+
+    <circle cx="50" cy="50" r="40" style="stroke: none; fill: green;" />
+    <circle cx="50" cy="50" r="20" style="stroke: none; fill: red;" />
+    <line x1="10" y1="50" x2="90" y2="50" style="stroke: black; stroke-width: 5;" />
+    <line x1="50" y1="10" x2="50" y2="90" style="stroke: black; stroke-width: 5;" />
+  </svg>
+
+  <br><br>
+
+  <div class="notes">
+    <p>This example shows the attribute preserveAspectRation "none" in action in a case where the aspect ratio of the viewport and the viewBox differ.  In this case the viewport is 1:3 and the viewBox 1:1.</p>
+    <p>A lightgrey background has been shown on the viewport so that the action of the attribute can be more clearly seen.  Please see the accompanying code.</p>
+  </div>
+
+</body>
+</html>

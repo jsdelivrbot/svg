@@ -1,0 +1,18 @@
+/*       Author: Richard Myatt
+           Date: 4 August 2018
+
+           This example is taken from chapter 1 of 'SVG Essentials' by
+           J. David Eisenberg.  The original code contains an xml header
+           for the svg file which has been removed for this html page.  The
+           header takes the following form:
+
+           <?xml version="1.0"?>
+           <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+             "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+*/
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

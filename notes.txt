@@ -1,0 +1,19 @@
+xml namespace - http://www.w3.org/2000/svg
+
+<svg viewBox="0 0 400 100">
+    <!-- list resourses in a <defs> element -->
+    <defs>
+        <rect id="def-rect"
+            x="-25" y="-25"
+            width="50" height="50"
+            fill="#29e" />
+    </defs>
+
+    <!-- reference resourses by ID in xlink:href attribute -->
+    <use xlink:href="#def-rect" transform="translate(100 50)"/>
+    <use xlink:href="#def-rect" transform="translate(200 50)"/>
+    <use xlink:href="#def-rect" transform="translate(300 50)"/>
+</svg>
+
+https://www.sarasoueidan.com/blog/svg-coordinate-systems/
+

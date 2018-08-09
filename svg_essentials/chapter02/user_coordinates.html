@@ -1,0 +1,55 @@
+<!--       Author: Richard Myatt
+           Date: 7 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  In this example the viewport units are modified
+           by the use of a viewBox attribute to specify user coordinates.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/user_coordinates.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG - user coordinates</title>
+</head>
+<body>
+  <h1>SVG - User Coordinates</h1>
+
+  <br><br>
+
+  <svg width="6cm" height="4cm" viewBox="0 0 12 8">
+    <title>Rectangle displayed in user coordinates</title>
+    <desc>An example of how to use user coordinates using the viewBox</desc>
+
+    <!-- grid -->
+    <line x1="0" y1="0" x2="0" y2="8" style="stroke: #000; stroke-width: 2%;" />
+    <line x1="2" y1="0cm" x2="2" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="4" y1="0" x2="4" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="6" y1="0" x2="6" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="8" y1="0" x2="8" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="10" y1="0" x2="10" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="12" y1="0" x2="12" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+
+    <line x1="0" y1="0" x2="12" y2="0" style="stroke: #000; stroke-width: 2%;" />
+    <line x1="0" y1="2" x2="12" y2="2" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="0" y1="4" x2="12" y2="4" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="0" y1="6" x2="12" y2="6" style="stroke: #ddd; stroke-width: 1%;" />
+    <line x1="0" y1="8" x2="12" y2="8" style="stroke: #ddd; stroke-width: 1%;" />
+
+    <!-- rectangle -->
+    <rect x="2" y="2" width="6" height="4"
+      style="stroke: blue; fill: none; stroke-width: 1%;" />
+  </svg>
+
+  <br><br>
+
+  <div class="notes">
+    <p>This example shows how user coordinates can be specified using the viewBox attribute.  The svg viewport in this example measures 6cm x 4cm.  The user coordinates are set at 2 units per centimeter.  A rectangle is then drawn which is 6 x 4 user units and renders at half scale.  That is 1:2.</p>
+    <p>Please note that the grid is shown at 1cm intervals.  Please see the accompanying code.</p>
+  </div>
+
+</body>
+</html>

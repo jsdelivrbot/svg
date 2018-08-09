@@ -1,0 +1,19 @@
+/*       Author: Richard Myatt
+           Date: 7 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  In this example the aspect ration of the viewport
+           and the viewBox differ and the attribute preserveAspectRatio "alignment
+           meet"is used to determine how the image is rendered.
+*/
+
+svg {
+  background-color: #eee;
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

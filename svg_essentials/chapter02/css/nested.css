@@ -1,0 +1,11 @@
+/*          Author: Richard Myatt
+              Date: 8 August 2018
+
+              This example illustrates the use of nested svg elements and is
+              based on an illustration in chapter 2 of "SVG Essentials" by
+              J. David Eisenberg.
+*/
+
+.outer {
+  margin-left: 20px;
+}

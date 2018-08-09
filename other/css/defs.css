@@ -1,0 +1,11 @@
+/*          Author: Richard Myatt
+              Date: 8 August 2018
+
+              An example of the use of the defs tage.  The image code between
+              these tags is not rendered but can be later refered to for the
+              purpose of rendering as in this example which employs the use tag.
+*/
+
+svg {
+  margin-left: 20px;
+}

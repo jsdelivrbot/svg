@@ -1,0 +1,68 @@
+<!--       Author: Richard Myatt
+           Date: 6 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  Here the svg uses default user units and the
+           rectangle uses explicit dimensions in mm.  In this case the units are
+           converted to pixels before rendering and the rectangle appears in the
+           position expected.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/units_rectangle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG rectangle - explicit units</title>
+</head>
+<body>
+  <h1>SVG rectangle using explicit units</h1>
+
+  <br><br>
+
+  <svg width="200" height="100">
+    <title>Rectangle</title>
+    <desc>Rectangle specified in explicit units and viewport dimensions specified in default units</desc>
+
+    <!-- grid -->
+    <line x1="0" y1="0" x2="0" y2="100" style="stroke: #000; stroke-width: 3px;" />
+    <line x1="20" y1="0" x2="20" y2="100" style="stroke: #ddd;" />
+    <line x1="40" y1="0" x2="40" y2="100" style="stroke: #ddd;" />
+    <line x1="60" y1="0" x2="60" y2="100" style="stroke: #ddd;" />
+    <line x1="80" y1="0" x2="80" y2="100" style="stroke: #ddd;" />
+    <line x1="100" y1="0" x2="100" y2="100" style="stroke: #dd;" />
+    <line x1="120" y1="0" x2="120" y2="100" style="stroke: #ddd;" />
+    <line x1="140" y1="0" x2="140" y2="100" style="stroke: #ddd;" />
+    <line x1="160" y1="0" x2="160" y2="100" style="stroke: #ddd;" />
+    <line x1="180" y1="0" x2="180" y2="100" style="stroke: #ddd;" />
+    <line x1="200" y1="0" x2="200" y2="100" style="stroke: #ddd;" />
+
+    <line x1="0" y1="0" x2="200" y2="0" style="stroke: #000; stroke-width: 3px;" />
+    <line x1="0" y1="20" x2="200" y2="20" style="stroke: #ddd;" />
+    <line x1="0" y1="40" x2="200" y2="40" style="stroke: #ddd;" />
+    <line x1="0" y1="60" x2="200" y2="60" style="stroke: #ddd;" />
+    <line x1="0" y1="80" x2="200" y2="80" style="stroke: #ddd;" />
+    <line x1="0" y1="100" x2="200" y2="100" style="stroke: #ddd;" />
+
+
+    <!-- rectangle -->
+    <rect x="10mm" y="10mm" width="30mm" height="10mm"
+      style="stroke: blue; fill: none;" />
+  </svg>
+
+  <br><br>
+
+  <div class="notes">
+    <strong>
+    <p>"The world of SVG is an infinite canvas.</p>
+    <p>The area of the canvas that your document intends to use is called the viewport."</p>
+    </strong>
+    <p>The two quotes above are taken from chapter 2 of 'SVG Essentials' by J. David Eisenberg.</p>
+    <p>This example shows a rectangle drawn in a viewport where the viewport dimensions are specifed in default units and the rectangle is specified using explicit dimensions in mm.  In effect the explicit dimensions are converted back into default units before rendering.</p>
+    <p>Please note that the grid is shown at 20px intervals.  Please see the accompanying code.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!--          Author: Richard Myatt
+              Date: 8 August 2018
+
+              An example of the use of the defs tage.  The image code between
+              these tags is not rendered but can be later refered to for the
+              purpose of rendering as in this example which employs the use tag.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/defs.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG &lt;defs&gt; tag</title>
+</head>
+<body>
+
+  <h1>Using the SVG &lt;defs&gt; tag</h1>
+
+  <br><br>
+
+  <svg width="550px" height="100px" viewBox="0 0 550 100">
+    <title>defs tag demo</title>
+    <desc>An example of the use of the defs tag</desc>
+
+    <!-- these are the defs tags with a group of svg elements -->
+    <!-- this code will not render until called -->
+    <defs>
+      <g id="rect-demo">
+        <rect x="0" y="0" width="50" height="50"
+          style="fill: yellow; stroke: none;" />
+        <circle cx="25" cy="25" r="15"
+          style="fill: orange; stroke: black" />
+      </g>
+    </defs>
+
+    <!-- provide a background to the viewport -->
+    <rect x="0" y="0" width="700" height="200"
+      style="fill: #ddd; stroke: none"/>
+
+    <!-- call and render the code between the defs tags -->
+    <use xlink:href="#rect-demo" transform="translate(100 25)" />
+    <use xlink:href="#rect-demo" transform="translate(250 25)" />
+    <use xlink:href="#rect-demo" transform="translate(400 25)" />
+
+  </svg>
+
+</body>
+</html>

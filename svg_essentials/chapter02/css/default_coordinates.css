@@ -1,0 +1,19 @@
+/*         Author: Richard Myatt
+           Date: 6 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  Here both the svg and its contents, the rectangle,
+           use default user units which are dimensionless.  In such cases the
+           units are assumed to equate to pixels by the program rendering the
+           svg and the result is what one would expect.
+*/
+
+svg {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

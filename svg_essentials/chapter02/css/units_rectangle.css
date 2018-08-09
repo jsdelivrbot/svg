@@ -1,0 +1,19 @@
+/*         Author: Richard Myatt
+           Date: 6 August 2018
+
+           This is a modified example taken from chapter 2 of 'SVG Essentials' by
+           J. David Eisenberg.  Here the svg uses default user units and the
+           rectangle uses explicit dimensions in mm.  In this case the units are
+           converted to pixels before rendering and the rectangle appears in the
+           position expected.
+*/
+
+svg {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
