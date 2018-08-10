@@ -1,0 +1,89 @@
+<!--          Author: Richard Myatt
+              Date: 10 August 2018
+
+              This is a demo of showing how external files and elements of a
+              file can be referenced and displayed.  The contents of the two
+              external files are shown below:
+
+green_circle.svg
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg id="circle"  width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle id="greencircle" cx="50" cy="50" r="50" fill="green" />
+</svg>
+
+and bullseye.svg
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg id="bullseye" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <title>Bullseye</title>
+  <desc>Image for testing preserveAspectRatio</desc>
+
+    <circle cx="50" cy="50" r="40" style="stroke: none; fill: green;" />
+    <circle id="inner-circle" cx="50" cy="50" r="20" style="stroke: none; fill: red;" />
+    <line x1="10" y1="50" x2="90" y2="50" style="stroke: black; stroke-width: 5;" />
+    <line x1="50" y1="10" x2="50" y2="90" style="stroke: black; stroke-width: 5;" />
+</svg>
+
+-->
+              
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/external.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>External SVG</title>
+</head>
+<body>
+
+  <h1>Referencing an external svg files</h1>
+
+  <div class="container">
+
+      <!-- reference external file bullseye.svg -->
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <use xlink:href="svg/bullseye.svg#bullseye" x="0" y="0"/>
+      </svg>
+
+      <!-- reference an element of the external file bullseye.svg -->
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <use xlink:href="svg/bullseye.svg#inner-circle" x="0" y="0"/>
+      </svg>
+
+      <!-- use img tag to reference external file at width=64px -->
+      <img src="svg/green_circle.svg" height="50" alt="Nice green circle"/>
+
+  </div>
+
+  <div class="notes">
+    <p>SVG files and elements</p>
+  </div>
+
+  <!-- reference external file bullseye.svg and use it as a fill element -->
+  <svg class="pattern" width="300" height="300" viewBox="0 0 300 300">
+
+  <defs>
+     <pattern id="grid" x="10" y="10" width="20" height="20" patternUnits="userSpaceOnUse">
+       <svg width="20" height="20" viewBox="0 0 100 100">
+         <use xlink:href="svg/bullseye.svg#bullseye" x="0" y="0"/>
+       </svg>
+     </pattern>
+   </defs>
+
+  <rect x="0" y="0" width="300" height="300"
+    style="fill: url(#grid);" />
+  </svg>
+
+  <div class="notes">
+    <p>External file used for pattern.</p>
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

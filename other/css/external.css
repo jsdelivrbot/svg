@@ -1,0 +1,10 @@
+h1, .container, .pattern, .notes {
+  margin-left: 20px;
+}
+
+.container {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

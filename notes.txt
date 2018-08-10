@@ -17,3 +17,5 @@ xml namespace - http://www.w3.org/2000/svg
 
 https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 
+A Compendium of SVG - https://css-tricks.com/mega-list-svg-information/
+
