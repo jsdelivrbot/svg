@@ -1,0 +1,21 @@
+/*          Author: Richard Myatt
+              Date: 10 August 2018
+
+              The examples here show the SVG circle, ellipse, polygon,
+              and polyline together with linecaps and linejoin and are based
+              on those in chapter 3 of 'SVG Essentials by J. David Eisenberg.'
+*/
+
+body {
+  background-color: #eee;
+}
+
+.frame, h1 {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

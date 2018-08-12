@@ -30,12 +30,12 @@ and bullseye.svg
 </svg>
 
 -->
-              
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/external.css">
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/external.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>External SVG</title>
@@ -44,16 +44,17 @@ and bullseye.svg
 
   <h1>Referencing an external svg files</h1>
 
+
   <div class="container">
 
       <!-- reference external file bullseye.svg -->
       <svg width="50" height="50" viewBox="0 0 100 100">
-        <use xlink:href="svg/bullseye.svg#bullseye" x="0" y="0"/>
+        <use href="svg/bullseye.svg#bullseye" x="0" y="0"/>
       </svg>
 
       <!-- reference an element of the external file bullseye.svg -->
       <svg width="50" height="50" viewBox="0 0 100 100">
-        <use xlink:href="svg/bullseye.svg#inner-circle" x="0" y="0"/>
+        <use href="svg/bullseye.svg#inner-circle" x="0" y="0"/>
       </svg>
 
       <!-- use img tag to reference external file at width=64px -->
@@ -71,7 +72,7 @@ and bullseye.svg
   <defs>
      <pattern id="grid" x="10" y="10" width="20" height="20" patternUnits="userSpaceOnUse">
        <svg width="20" height="20" viewBox="0 0 100 100">
-         <use xlink:href="svg/bullseye.svg#bullseye" x="0" y="0"/>
+         <use href="svg/bullseye.svg#bullseye" x="0" y="0"/>
        </svg>
      </pattern>
    </defs>

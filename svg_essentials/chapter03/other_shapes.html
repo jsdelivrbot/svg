@@ -1,0 +1,151 @@
+<!--          Author: Richard Myatt
+              Date: 10 August 2018
+
+              The examples here show the SVG circle, ellipse, polygon,
+              and polyline together with linecaps and linejoin and are based
+              on those in chapter 3 of 'SVG Essentials by J. David Eisenberg.'
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/other_shapes.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Other SVG shapes</title>
+</head>
+<body>
+
+  <h1>SVG circles/ellipses, polygons etc.</h1>
+
+  <br><br>
+
+  <svg class="frame" width="480" height="480" viewBox="0 0 480 480">
+    <title>SVG other shapes demo</title>
+    <desc>SVG other shapes demo based on chapter 3 of SVG Essentials</desc>
+
+    <!-- prepare a grid pattern for the background -->
+    <defs>
+      <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="20" height="20"
+          style="fill: #fff; stroke: #ddd;"/>
+      </pattern>
+    </defs>
+
+    <!-- split the area up visually into four parts -->
+    <rect x="0" y="0" width="480" height="480"
+      style="fill: url(#grid); stroke: blue; stroke-width: 4;" />
+    <line x1="240" y1="0" x2="240" y2="480"
+      style="stroke: blue;" />
+    <line x1="0" y1="240" x2="480" y2="240"
+      style="stroke: blue;" />
+
+    <!-- Circles and ellipses -->
+    <svg x="0" y="0" width="240" height="240" viewBox="0 0 240 240">
+
+      <!-- circle -->
+      <circle cx="70" cy="70" r="30"
+        style="stroke: black; fill: none;" />
+
+      <!-- circle with wide stroke -->
+      <circle cx="170" cy="70" r="30"
+        style="stroke: black; stroke-width: 5; fill: none;" />
+
+      <!-- vertical ellipse -->
+      <ellipse cx="70" cy="160" rx="30" ry="40"
+        style="stroke: black; fill: none;" />
+
+      <!-- horizontal ellipse -->
+      <ellipse cx="170" cy="160" rx="30" ry="20"
+        style="stroke: black; fill: none;" />
+
+      <!-- caption -->
+      <text x="120" y="230"
+        style="fill: darkred; text-anchor: middle;">Circles and ellipses</text>
+    </svg>
+
+    <!-- Polygons -->
+    <svg x="240" y="0" width="240" height="240" viewBox="0 0 240 240">
+
+      <!-- parallelogram -->
+      <polygon	points="40,40		135,	40		115,	60		30,	60"
+				style="fill:	red;	stroke:	black;"/>
+
+      <!-- star -->
+      <polygon
+      points="100,100		105.8,117.2	123.8,117.2		109.4,128
+						114.6,145.2		100,135		85.4,145.2		90.6,128
+						76.2,117.2		94.2,117.2"
+						style="fill:	#ccffcc;	stroke:	green;"/>
+
+      <!-- odd shape -->
+      <polygon
+				points="160	160,		165	172,		180	160,		190	190,	172	180,	172	185,	150	195"
+				style="fill:	yellow;	fill-opacity:	0.5;	stroke:	black;
+						stroke-width:	2;"/>
+
+      <!-- caption -->
+      <text x="120" y="230"
+        style="fill: darkred; text-anchor: middle;">Polygons</text>
+    </svg>
+
+    <!-- Polyines -->
+    <svg x="0" y="240" width="240" height="240" viewBox="0 0 240 240">
+
+      <!-- polyline -->
+      <polyline
+    		points="75	120,	90	120,	95	110,	105	130,	115	110,
+    				125	130,	135	110,	145	130,	150	120,	165	120"
+    		style="stroke:	black;	stroke-width:	3;	fill:	none;"/>
+
+      <!-- caption -->
+      <text x="120" y="230"
+        style="fill: darkred; text-anchor: middle;">Polylines</text>
+    </svg>
+
+    <!-- Linecaps and stroke-linejoin -->
+    <svg x="249" y="240" width="240" height="240" viewBox="0 0 240 240">
+
+      <!-- polyline -->
+      <line	x1="90"	y1="35"	x2="130"	y2="35"
+		    style="stroke:	black;	stroke-linecap:	butt;	stroke-width:	15;"/>
+      <line	x1="90"	y1="65"	x2="130"	y2="65"
+      		style="stroke:	black;	stroke-linecap:	round;	stroke-width:	15;"/>
+      <line	x1="90"	y1="95"	x2="130"	y2="95"
+      		style="stroke:	black;	stroke-linecap:	square;	stroke-width: 15;"/>
+
+      <!--	guide	lines	-->
+      <line	x1="90"	y1="20"	x2="90"	y2="120"	style="stroke:	#999;"/>
+      <line	x1="130"	y1="20"	x2="130"	y2="120"	style="stroke:	#999;"/>
+
+      <!-- line join -->
+      <polyline
+    		style="stroke-linejoin:	miter;	stroke:	black;	stroke-width:	12;
+    		fill:	none;"
+    		points="35	175,	50	160,	65	175"/>
+      <polyline
+      		style="stroke-linejoin:	round;	stroke:	black;	stroke-width:	12;
+      		fill:	none;"
+      		points="95	175,	110	160,	125	175"/>
+      <polyline
+      		style="stroke-linejoin:	bevel;	stroke-width:	12;	stroke:	black;
+      		fill:	none;"
+      		points="155	175,	170	160,	185	175"/>
+
+      <!-- caption -->
+      <text x="120" y="230"
+        style="fill: darkred; text-anchor: middle;">Linecaps and linejoin</text>
+    </svg>
+
+  </svg>
+
+  <br><br>
+
+  <div class="notes">
+    <p>The examples above are based on those in chapter 3 of 'SVG Essentials' by J. David Eisenberg.  See accompanying code for each example.</p>
+    <p>Please note that the grid has a spacing of 20 units square.</p>
+  </div>
+
+</body>
+</html>
