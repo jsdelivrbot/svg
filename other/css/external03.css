@@ -41,3 +41,13 @@ h1, .container, .pattern, .notes {
   justify-content: space-between;
   align-items: center;
 }
+
+.spacer {
+  height: 50px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
