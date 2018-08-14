@@ -1,0 +1,41 @@
+<!--          Author: Richard Myatt
+              Date: 12 August 2018
+              A demonstration of how an external SVG can be imported using the
+              object tag.  Doing so allows the attributes of the SVG to be
+              altered using Javascript.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/external02.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>External svg files</title>
+</head>
+<body>
+
+  <h1>External svg files 02</h1>
+
+  <object id="svgBullseye" onload="loadScript()" data="svg/bullseye.svg"
+    type="image/svg+xml" height="100" width="100">
+    Your browser doesn't support SVG
+  </object>
+
+  <br><br>
+
+  <button id="btn">Togle inner colour</button>
+
+  <div class="notes">
+    <p>A demonstration of how an external SVG can be imported using the object tag.  Doing so allows the attributes of the SVG to be altered using Javascript.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+  <script src="js/external02.js" async="false">
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--          Author: Richard Myatt
+              Date: 14 August 2018
+
+              This is a demonstration of the use of internal
+              stylesheets used in SVG images and is based on a
+              similar example in chapter 5 of 'SVG Essentials' by
+              J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/internal_stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Internal Stylesheets</title>
+</head>
+<body>
+
+  <h1>SVG Internal Stylesheets</h1>
+
+  <svg	width="200px"	height="200px"	viewBox="0	0	100	100"
+		xmlns="http://www.w3.org/2000/svg">
+    <title>Internal stylesheet demo</title>
+
+    <!-- define the internal stylesheet -->
+    <style>
+      <![CDATA[
+              circle {
+                fill: #ffc;
+                stroke: blue;
+                stroke-width: 2;
+                stroke-dasharray: 5 3;
+              }
+      ]]>
+    </style>
+
+    <circle	cx="20"	cy="20"	r="10"/>
+    <circle	cx="60"	cy="20"	r="15"/>
+    <circle	cx="20"	cy="60"	r="10"	style="fill:	#cfc"/>
+    <circle	cx="60"	cy="60"	r="15"
+  		style="stroke-width:	1;	stroke-dasharray:	none;"/>
+  </svg>
+
+  <div class="notes">
+    <p>This demo is based on an example in chapter 5 of 'SVG Essentials' by J. David Eisenberg.  It shows the use of an internal stylesheet used in conjunction with inline styles which overide those in the stylesheet.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+/*          Author: Richard Myatt
+              Date: 12 August 2018
+
+              This is a demonstration of how an external svg file can be
+              imported for use on a web page using the img tag.
+*/
+
+h1, img, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

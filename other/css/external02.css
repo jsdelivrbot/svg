@@ -1,0 +1,21 @@
+/*            Author: Richard Myatt
+              Date: 12 August 2018
+              A demonstration of how an external SVG can be imported using the
+              object tag.  Doing so allows the attributes of the SVG to be
+              altered using Javascript.
+*/
+
+h1, button, .notes {
+  margin-left: 20px;
+}
+
+button {
+  background-color: orange;
+  padding: 8px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
