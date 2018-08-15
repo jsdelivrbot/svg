@@ -1,0 +1,70 @@
+<!--          Author: Richard Myatt
+              Date: 15 August 2018
+
+              This code illustrates the difference in the way a
+              group and a symbol are rendered and is taken from a similar example in chapter 5 of 'SVG Essentials' by
+              J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/symbol.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG symbol</title>
+</head>
+<body>
+
+  <h1>SVG symbol</h1>
+
+  <svg	width="200px"	height="200px"	viewBox="0	0	200	200"
+		xmlns="http://www.w3.org/2000/svg">
+    <title>Symbols	vs.	groups</title>
+    <desc>Use of symbols and groups</desc>
+    <defs>
+      <!-- shape defined within a group element -->
+  		<g	id="octagon"	style="stroke:	black;">
+				<desc>Octagon	as	group</desc>
+				<polygon	points="
+						36	25,	25	36,	11	36,	0	25,
+						0	11,	11	0,	25	0,	36	11"/>
+  		</g>
+
+      <symbol	id="sym-octagon"	style="stroke:	black;"
+        preserveAspectRatio="xMidYMid	slice"	viewBox="0	0	40	40">
+  				<desc>Octagon	as	symbol</desc>
+  				<polygon	points="
+  						36	25,	25	36,	11	36,	0	25,
+  						0	11,	11	0,	25	0,	36	11"/>
+  		</symbol>
+    </defs>
+
+    <!-- display areas into which shapes are rendered -->
+    <g	style="fill:none;	stroke:gray">
+    		<rect	x="40"	y="40"	width="30"	height="30"/>
+    		<rect	x="80"	y="40"	width="40"	height="60"/>
+    		<rect	x="40"	y="110"	width="30"	height="30"/>
+    		<rect	x="80"	y="110"	width="40"	height="60"/>
+    </g>
+
+    <!-- render the groups and the symbols -->
+    <use	xlink:href="#octagon"	x="40"	y="40"	width="30"	height="30"
+    		style="fill:	#c00;"/>
+    <use	xlink:href="#octagon"	x="80"	y="40"	width="40"	height="60"
+    		style="fill:	#cc0;"/>
+    <use	xlink:href="#sym-octagon"	x="40"	y="110"	width="30" height="30"
+    		style="fill:	#cfc;"/>
+    <use	xlink:href="#sym-octagon"	x="80"	y="110"	width="40"	height="60"
+    		style="fill:	#699;"/>
+  </svg>
+
+  <div class="notes">
+    <p>This example is based on a similar example in chapter 5 of 'SVG Essentials' by J. David Eisenberg and illustrates the difference in the way a group and a symbol are rendered.  The rectangles surrounding each figure are intended to show how in the case of a group the boundary of the bounding box is ignored in contrast to the symbol which is constrained by the bounding box.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

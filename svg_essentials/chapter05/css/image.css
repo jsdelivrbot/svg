@@ -1,0 +1,17 @@
+/*        Author: Richard Myatt
+            Date: 15 August 2018
+
+            This is a demonstration of the use of the SVG image
+            tag and is based on a similar example in chapter 5 of
+            'SVG Essentials' by J. David Eisenberg.
+*/
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

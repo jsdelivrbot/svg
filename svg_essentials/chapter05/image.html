@@ -1,0 +1,47 @@
+<!--        Author: Richard Myatt
+            Date: 15 August 2018
+
+            This is a demonstration of the use of the SVG image
+            tag and is based on a similar example in chapter 5 of
+            'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/image.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG image tag</title>
+</head>
+<body>
+
+  <h1>SVG image tag</h1>
+
+  <svg	width="310px"	height="310px"	viewBox="0	0	310	310"
+		xmlns="http://www.w3.org/2000/svg">
+
+    <!-- render grey background ellipse -->
+    <ellipse	cx="154"	cy="154"	rx="150"	ry="120"
+      style="fill: #999999;" />
+
+    <!-- render top ellipse -->
+    <ellipse	cx="152"	cy="152"	rx="150"	ry="120"
+      style="fill: #cceeff;" />
+
+    <!-- render an external image (vector or raster) -->
+    <image	xlink:href="https://cdn.rawgit.com/aronnax77/svg/d7cffc68/collection/parrot.svg"
+  		x="72"	y="92"
+  		width="160"	height="120" />
+
+  </svg>
+
+  <div class="notes">
+    <p>This example is based on a similar example in chapter 5 of 'SVG Essentials' by J. David Eisenberg.  It shows the use of the image tag and successfully imports raster images as well as SVG images as in this case from remote sources.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
