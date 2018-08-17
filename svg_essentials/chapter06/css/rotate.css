@@ -1,0 +1,20 @@
+/*          Author: Richard Myatt
+              Date: 17 August 2018
+
+              A demonstration of the use of the svg rotate transform based on
+              an example in chapter 6 of 'SVG Essentials' by J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
