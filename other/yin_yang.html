@@ -1,0 +1,53 @@
+<!--            Author: Richard Myatt
+                Date: 18 August 2018
+
+                An SVG Yin Yang symbol exploring paths and arcs.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/yin_yang.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Yin Yang Symbol</title>
+</head>
+<body>
+
+  <h1>SVG Yin Yang Symbol</h1>
+
+  <svg width="200" height="200" viewBox="0 0 100 100"
+    xmlns:svg="http://www.w3.org/2000/svg">
+    <title>SVG Yin Yang Symbol</title>
+    <desc>Exploring arcs with the Yin Yang symbol</desc>
+
+    <!-- background circle -->
+    <circle cx="50" cy="50" r="50"
+      style="fill: #000; stroke: none;" />
+
+    <!-- inner white background -->
+    <circle cx="50" cy="50" r="48"
+      style="fill: #fff; stroke: none;" />
+
+    <!-- black inner area -->
+    <path d="M 50 2 A 48 48, 0, 1, 1, 50 98
+      A 24 24, 0, 1, 1, 50 50"
+      style="fill: #000; stroke: none;" />
+
+    <!-- small white arc at top of symbol -->
+    <path d="M 50 2 A 24 24, 0, 1, 1, 50 50"
+      style="fill: #fff; stroke: none;" />
+
+    <!-- small black circle -->
+    <circle cx="50" cy="26" r="8"
+      style="fill: #000; stroke: none;" />
+
+    <!-- small white circle -->
+    <circle cx="50" cy="74" r="8"
+      style="fill: #fff; stroke: none;" />
+
+  </svg>
+
+</body>
+</html>
