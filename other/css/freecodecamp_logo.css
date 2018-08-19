@@ -1,0 +1,19 @@
+/*              Author: Richard Myatt
+                  Date: 19 August 2018
+
+                  An exercise to convert the FreeCodeCamp Logo into an svg image.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
