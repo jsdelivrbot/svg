@@ -1,0 +1,45 @@
+<!--          Author: Richard Myatt
+              Date: 20 August 2018
+
+              An example of how the SVG fill-rule affects the way in which a
+              figure is filled and is based on a similar example in chapter 4
+              of 'SVG Essentials' by J. David Eisenberg.
+-->.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/fill_rules.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG fill-rule</title>
+</head>
+<body>
+
+  <h1>SVG fill-rule</h1>
+
+  <svg	width="400px"	height="300px"	viewBox="0	0	200	150"
+		xmlns="http://www.w3.org/2000/svg">
+
+  <polygon	style="fill-rule:	nonzero;	fill:	yellow;	stroke:	black;"
+  		points="48,16	16,96	96,48	0,48 80,96"	/>
+
+  <text x="50" y="140"
+    style="fill: darkred; text-anchor: middle;">nonzero</text>
+
+  <polygon	style="fill-rule:	evenodd;		fill:	#00ff00;	stroke:	black;"
+  		points="148,16 116,96	196,48 100,48	180,96"	/>
+
+  <text x="150" y="140"
+    style="fill: darkred; text-anchor: middle;">evenodd</text>
+
+  <div class="notes">
+    <p>This example demonstrates how the fill-rule affects the way in which a figure is filled and is based on a similar example in chapter 4 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+</svg>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+/*          Author: Richard Myatt
+              Date: 20 August 2018
+
+              An example of how the SVG fill-rule affects the way in which a
+              figure is filled and is based on a similar example in chapter 4
+              of 'SVG Essentials' by J. David Eisenberg.
+*/
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

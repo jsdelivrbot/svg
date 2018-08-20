@@ -1,0 +1,61 @@
+<!--          Author: Richard Myatt
+              Date: 20 August 2018
+
+              Using patterns with patternUnits="objectBoundingBox".  This example is based on a similar example in chapter 8 of 'SVG Essentials' by
+              J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/pattern01.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Paterns 01</title>
+</head>
+<body>
+
+  <h1>SVG Patterns 01</h1>
+
+  <svg width="400" height="640" viewBox="0 0 200 320"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG Patterns 01</title>
+    <desc>A demonstration of the use of patterns with patternUnits set to objectBoundingBox</desc>
+
+    <!-- specify the pattern - in this case a square with an inner circle -->
+    <defs>
+      <pattern id="tile" x="0" y="0" width="20%" height="20%"
+        patternUnits="objectBoundingBox">
+        <rect x="0" y="0" width="20" height="20"
+          style="fill: none; stroke: grey;" />
+        <circle cx="10" cy="10" r="9"
+          style="fill: none; stroke: red;" />
+        ></circle>
+        ></rect>
+      </pattern>
+    </defs>
+
+    <!-- use the pattern in a rectangle which will exactly accomodate the pattern size -->
+    <rect x="0" y="0" width="100" height="100"
+      style="fill: url(#tile); stroke: black;" />
+
+    <!-- use the pattern at half the size -->
+    <rect x="150" y="0" width="50" height="50"
+      style="fill: url(#tile); stroke: black;" />
+
+    <!-- use the pattern at twice the size -->
+    <rect x="0" y="120" width="200" height="200"
+      style="fill: url(#tile); stroke: black;" />
+  </svg>
+
+  <div class="notes">
+    <p>This is an example of the behaviour of an svg pattern applied using patternUnits="objectBoundingBox".  This is the default setting when using a pattern and should be accompanied by width and height attributes set in percentages or as a decimal between 0 and 1 if a meaningful pattern is to result.  In this case a setting of 0.2 will give the same result.  Approaching a pattern in this way ensures that the same number of pattern images are used whatever the background size.</p>
+
+    <p>This example is based on a similar example in chapter 8 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
