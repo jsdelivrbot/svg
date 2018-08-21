@@ -1,0 +1,61 @@
+<!--          Author: Richard Myatt
+              Date: 21 August 2018
+
+              Using patterns with patternContentUnits="objectBoundingBox".  This
+              example is based on a similar example in chapter 8 of 'SVG
+              Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/pattern03.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Paterns 03</title>
+</head>
+<body>
+
+  <h1>SVG Patterns 03</h1>
+
+  <svg width="400" height="640" viewBox="0 0 200 320"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG Patterns 01</title>
+    <desc>A demonstration of the use of patternContentUnits="objectBoundingBox"</desc>
+
+    <!-- specify the pattern - in this case a square with an inner circle -->
+    <defs>
+      <pattern id="tile" x="0" y="0" width="0.2" height="0.2"
+        patternUnits="objectBoundingBox"
+        patternContentUnits="objectBoundingBox">
+        <rect x="0" y="0" width="0.2" height="0.2"
+          style="fill: none; stroke: grey; stroke-width: 0.01" />
+        <circle cx="0.1" cy="0.1" r="0.09"
+          style="fill: none; stroke: red; stroke-width: 0.01" />
+      </pattern>
+    </defs>
+
+    <!-- use the pattern in a rectangle which will exactly accomodate the pattern size -->
+    <rect x="0" y="0" width="100" height="100"
+      style="fill: url(#tile); stroke: black;" />
+
+    <!-- use the pattern at half the size -->
+    <rect x="150" y="0" width="50" height="50"
+      style="fill: url(#tile); stroke: black;" />
+
+    <!-- use the pattern at twice the size -->
+    <rect x="0" y="120" width="200" height="200"
+      style="fill: url(#tile); stroke: black;" />
+  </svg>
+
+  <div class="notes">
+    <p>This is an example of the behaviour of an svg pattern applied using patternContentUnits= "objectBoundingBox".  The default is 'userSpaceOnUse' and will have automatically have been applied to patterns 01 and 02.  In this case a single user unit corresponds to the bounding box itself and all units relating to the pattern must therefore be reduced to values between 0 and 1.</p>
+
+    <p>This example is based on a similar example in chapter 8 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

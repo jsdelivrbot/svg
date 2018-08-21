@@ -1,0 +1,17 @@
+/*            Author: Richard Myatt
+              Date: 21 August 2018
+
+              Using patterns with patternContentUnits="objectBoundingBox".  This
+              example is based on a similar example in chapter 8 of 'SVG
+              Essentials' by J. David Eisenberg.
+*/
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

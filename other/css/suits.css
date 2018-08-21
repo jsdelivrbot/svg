@@ -1,0 +1,9 @@
+/*            Author: Richard Myatt
+              Date: 21 August 2018
+
+              Putting svg to work on the card suits.
+*/
+
+h1, svg {
+  margin-left: 20px;
+}

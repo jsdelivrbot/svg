@@ -1,0 +1,21 @@
+/*              Author: Richard Myatt
+                Date: 21 August 2018
+
+                A demonstration of the viewBox within an svg pattern specification
+                based on a similar example in chapter 8 of 'SVG Essentials' by
+                J. David Eisenberg.
+*/
+
+body {
+  background-color: lightgrey;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

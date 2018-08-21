@@ -19,3 +19,5 @@ https://www.sarasoueidan.com/blog/svg-coordinate-systems/
 
 A Compendium of SVG - https://css-tricks.com/mega-list-svg-information/
 
+A good web resource - https://svgontheweb.com/
+
