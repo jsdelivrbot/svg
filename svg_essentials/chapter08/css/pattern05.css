@@ -1,0 +1,15 @@
+/*          Author: Richard Myatt
+              Date: 22 August 2018
+
+              An example of the use of nested patterns within an svg image.
+*/
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

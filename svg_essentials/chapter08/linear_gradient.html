@@ -1,0 +1,58 @@
+<!--      Author: Richard Myatt
+          Date: 23 August 2018
+
+          An example of how linear gradients can be applied to
+          an SVG image based on a similar example in chapter 8
+          of 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/linear_gradient.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Linear Gradient</title>
+</head>
+<body>
+
+  <h1>SVG Linear Gradient</h1>
+
+  <svg width="400" height="420" viewBox="0 0 200 210"
+    xmlns="http://www.w3.org/2000/svg">
+      <title>SVG Linear Gradient demo</title>
+
+      <defs>
+        <!-- specify a template which can also be used for default gradient left to right -->
+        <linearGradient id="three_stops">
+          <stop offset="0%" style="stop-color: #ffcc00" />
+          <stop offset="33.3%" style="stop-color: #cc6699" />
+          <stop offset="100%" style="stop-color: #66cc99" />
+        </linearGradient>
+
+        <!-- specify diagonal gradient from top left to bottom right -->
+        <linearGradient id="diagonal"
+          xlink:href="#three_stops"
+          x1="0%" y1="0%" x2="100%" y2="100%" />
+      </defs>
+
+      <!-- fill with gradient from left to right -->
+      <rect x="0" y="0" width="200" height="100"
+        style="fill: url(#three_stops); stroke: #000;" />
+
+      <!-- fill with diagonal gradient -->
+      <rect x="0" y="110" width="200" height="100"
+        style="fill: url(#diagonal); stroke: #000;" />
+    </svg>
+
+    <div class="notes">
+      <p>An example of how a linear gradient can be used.  Note that gradientUnits is set to objectBoundingBox by default and that percentages or fractions must therefore be used to specify the gradine positioning.  This can be changed to userSpaceOnUse if desired.</p>
+
+      <p>This example is based on a similar example in chapter 8 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+      <p>Please see accompanying code.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--          Author: Richard Myatt
+              Date: 22 August 2018
+
+              An example of the use of nested patterns within an svg image.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/pattern05.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG nested patterns</title>
+</head>
+<body>
+
+  <h1>SVG nested patterns</h1>
+
+  <svg width="300" height="300" viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>Nested patterns</title>
+    <desc>A demonstration of nested patterns</desc>
+
+    <!-- specify the pattern - in this case a square with an inner circle
+         containing the nested pattern -->
+    <defs>
+      <!-- pattern to be nested - straight horizontal lines -->
+      <pattern id="stripe" x="0" y="0" width="5" height="5"
+        patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="5" height="5"
+          style="fill: #fff; stroke: none;"
+        ></rect>
+        <path d="M 0 0 5 0"
+          style="stroke-width: 2; stroke: black; fill: none" />
+        ></path>
+      </pattern>
+
+      <!-- main pattern containing fill -->
+      <pattern id="tile" x="0" y="0" width="20" height="20"
+        patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="20" height="20"
+          style="fill: lightyellow; stroke: grey;" />
+        <circle cx="10" cy="10" r="9"
+          style="fill: url(#stripe); stroke: red;" />
+      </pattern>
+    </defs>
+
+    <!-- put a border around the pattern area and fill with main pattern -->
+    <rect x="0" y="0" width="100" height="100"
+      style="fill: url(#tile); stroke: #000" />
+
+    </svg>
+
+    <div class="notes">
+      <p>This demo shows how one svg pattern can be nested within another.  In this case a simple line pattern is nested within the inner circle which forms part of the main pattern.  This example is based on a similar example in chapter 8 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+      <p>Please see accompanying code.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+/*            Author: Richard Myatt
+              Date: 22 August 2018
+
+              A simple lightbulb using svg
+*/
+
+h1, svg, .notes {
+  margin-left: 20px;
+}

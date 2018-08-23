@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg x="0" y="0" width="100" height="100"
+    xmlns="http://www.w3.org/2000/svg">
+	<title>hearts</hearts>
+
+      <path d="M 50, 25 A 25 25 0 1 1 100, 25 Q 100, 50 50, 100
+               M 50, 25 A 25 25 0 1 0 0, 25 Q 0, 50 50, 100 z"
+      style="fill: red; stroke: none;"/>
+    </svg>>
+      <path d="M 50, 25 A 25 25 0 1 1 100, 25 Q 100, 50 50, 100
+               M 50, 25 A 25 25 0 1 0 0, 25 Q 0, 50 50, 100 z"
+      style="fill: red; stroke: none;"/>
+</svg>
