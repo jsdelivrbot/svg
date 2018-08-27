@@ -1,0 +1,16 @@
+/*          Author: Richard Myatt
+            Date: 27 August 2018
+
+            Second background demo showing display of whole image.
+            See also https://code.sololearn.com/W4HwlVB0G8yx/#css
+*/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.rawgit.com/aronnax77/svg/617ff4f6/collection/ship.svg");
+  background-size: contain;
+}
