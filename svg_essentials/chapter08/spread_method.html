@@ -1,0 +1,65 @@
+<!--      Author: Richard Myatt
+          Date: 24 August 2018
+
+          An example of the use of the spreadMethod attribute
+          based on an example in chapter 8 of 'SVG Essentials'
+          by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/spread_method.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG spreadMethod</title>
+</head>
+<body>
+
+  <h1>SVG spreadMethod</h1>
+
+  <svg width="640" height="200" viewBox="0 0 320 100"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG spreadMethod</title>
+
+    <!-- specify a radial gradient -->
+    <defs>
+      <radialGradient id="three_stops"
+        cx="0%" cy="0%" r="70%">
+        <stop	offset="0%"	style="stop-color:	#f96;"/>
+				<stop	offset="50%"	style="stop-color:	#9c9;"/>
+				<stop	offset="100%"	style="stop-color:	#906;"/>
+      </radialGradient>
+
+      <!-- now make three gradients with spread method set to pad, repeat, and reflect -->
+      <radialGradient	id="padded"	xlink:href="#three_stops"
+				spreadMethod="pad"/>
+  		<radialGradient	id="repeated"	xlink:href="#three_stops"
+  				spreadMethod="repeat"/>
+  		<radialGradient	id="reflected"	xlink:href="#three_stops"
+  				spreadMethod="reflect"/>
+    </defs>
+
+    <!-- use the radial gradients to fill the images -->
+    <rect x="0" y="0" width="100" height="100"
+      style="fill: url(#padded); stroke: #000" />
+
+    <rect x="110" y="0" width="100" height="100"
+      style="fill: url(#repeated); stroke: #000" />
+
+    <rect x="220" y="0" width="100" height="100"
+      style="fill: url(#reflected); stroke: #000" />
+
+  </svg>
+
+  <div class="notes">
+    <p>This example shows the effect of using the spreadMethod attribute.  This can be set to pad (which simply fills the remaining space with the last stop colour), repeated (which repeates the pattern in the space available), and reflected (which reverses the gradient and then fills the remaining space).</p>
+
+    <p>This example is based on a similar example in chapter 8 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

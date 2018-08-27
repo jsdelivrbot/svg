@@ -3,7 +3,8 @@
 
           An example of using a radial gradient in an svg image
           based on a similar example in chapter 8 of 'svg
-          Essentials' by J. David Eisenberg.
+          Essentials' by J. David Eisenberg.  Amended to include
+          focal point example on 24 August 2018.
 -->
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
 
   <h1>SVG Radial Gradient</h1>
 
-  <svg width="420" height="200" viewBox="0 0 210 100"
+  <svg width="640" height="200" viewBox="0 0 320 100"
     xmlns="http://www.w3.org/2000/svg">
     <title>SVG Radial Gradient demo</title>
 
@@ -34,6 +35,10 @@
         xlink:href="#three_stops"
         cx="0%" cy="0%" r="141%" />
 
+      <radialGradient id="focal_point_set"
+        xlink:href="#three_stops"
+        cx="0%" cy="0%" r="141%" fx="50%" fy="50%"/>
+
     </defs>
 
     <rect x="0" y="0" width="100" height="100"
@@ -42,10 +47,15 @@
     <rect x="110" y="0" width="100" height="100"
       style="fill: url(#center_at_origin); stroke: #000" />
 
+      <rect x="220" y="0" width="100" height="100"
+        style="fill: url(#focal_point_set); stroke: #000" />
+
   </svg>
 
   <div class="notes">
     <p>An example of the use of a radial gradient based on a similar example in chapter 8 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>In the left most image the center of the pattern is not specified and reverts to the default in the center of the area.  In the middle image the center of the pattern is specified at the top left corner.  The third right most image is the same as the middle image but includes a focal point set at the center of the area.</p>
 
     <p>Please see accompanying code.</p>
   </div>

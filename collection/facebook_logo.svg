@@ -1,0 +1,42 @@
+<svg width="100" height="100" viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>Facebook icon</title>
+
+    <!-- gradient fill -->
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color: #6186d1" />
+        <stop offset="100%" style="stop-color: #2d4a86" />
+      </linearGradient>
+    </defs>
+
+    <!-- our icon -->
+    <g style="fill: url(#grad); stroke: none;"
+              transform="scale(0.218) translate(2, 2)">
+
+      <!-- background fill for the f -->
+      <rect x="0" y="0" width="440" height="440" cx="45" cy="45"
+        style="fill: #fff; stroke: none;" />
+
+      <!-- main outline -->
+      <path d="M 305 440 H 395 A 45 45 0 0 0 440 395
+              V 45 A 45 45 0 0 0 395 0
+              H 45 A 45 45 0 0 0 0 45
+              V 395 A 45 45 0 0 0 45 440
+              H 215 A 10 10 0 0 0 225 430
+              V 295 A 10 10 0 0 0 215 285
+              H 175 A 10 10 0 0 1 165 275
+              V 225 A 10 10 0 0 1 175 215
+              H 215 A 10 10 0 0 0 225 205
+              V 140 A 70 70 0 0 1 295 70
+              H 340 A 10 10 0 0 1 350 80
+              V 130 A 10 10 0 0 1 340 140
+              H 315 A 20 20 0 0 0 295 160
+              V 205 A 10 10 0 0 0 305 215
+              H 340 A 10 10 0 0 1 350 225
+              V 275 A 10 10 0 0 1 340 285
+              H 305 A 10 10 0 0 0 295 295
+              V 430 A 10 10 0 0 0 305 440 z" />
+    </g>
+
+ </svg>

@@ -3,7 +3,8 @@
 
           An example of using a radial gradient in an svg image
           based on a similar example in chapter 8 of 'svg
-          Essentials' by J. David Eisenberg.
+          Essentials' by J. David Eisenberg.  Amended to include
+          focal point example on 24 August 2018.
 */
 
 h1, svg, .notes {
@@ -11,7 +12,7 @@ h1, svg, .notes {
 }
 
 .notes {
-  width: 450px;
+  width: 640px;
   text-align: justify;
   margin-left: 20px;
 }

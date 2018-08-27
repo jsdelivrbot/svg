@@ -1,0 +1,73 @@
+<!--        Author: Richard Myatt
+            Date: 27 August 2018
+
+            An example of SVG's text on a path based on examples
+            in chapter 9 of 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/text_on_path.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>SVG text on a path</h1>
+
+  <svg width="450" height="250" viewBox="0 0 450 250"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG text on a path</title>
+
+    <defs>
+      <path	id="first"
+				d="M30	70	c 70, -30 110, -30 210, 0 s 30 0, 170, 0"
+				style="stroke:	gray;	fill:	none;"/>
+
+      <path	id="second"
+				d="M30	100	c 70, -30 110, -30 210, 0 s 30 0, 170, 0"
+				style="stroke:	gray;	fill:	none;"/>
+
+      <path	id="third"
+				d="M30	130	c 70, -30 110, -30 210, 0 s 30 0, 170, 0"
+				style="stroke:	gray;	fill:	none;"/>
+
+      <path	id="fourth"
+				d="M30	190	c 70, -30 110, -30 210, 0 s 30 0, 170, 0"
+				style="stroke:	gray;	fill:	none;"/>
+    </defs>
+
+    <rect x="0" y="0" width="500" height="500"
+      style="fill: #fff; stroke: #000;" />
+
+    <text>
+      <textPath xlink:href="#first" startOffset="10%">
+        This is an example of text on a path
+      </textPath>
+    </text>
+
+    <text>
+      <textPath xlink:href="#second" startOffset="5%">
+        based on a similar example in chapter 9 of
+      </textPath>
+    </text>
+
+    <text>
+      <textPath xlink:href="#third" startOffset="5%">
+        'SVG Essentials' by J. David Eisenberg.
+      </textPath>
+    </text>
+
+    <text>
+      <textPath xlink:href="#fourth" startOffset="5%">
+        Please see accompanying code.
+      </textPath>
+    </text>
+
+  </svg>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+/*        Author: Richard Myatt
+            Date: 27 August 2018
+
+            An example of SVG's text on a path based on examples
+            in chapter 9 of 'SVG Essentials' by J. David Eisenberg.
+*/
+
+body {
+  text-align: center;
+  background-color: #eee;
+}

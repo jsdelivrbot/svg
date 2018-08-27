@@ -1,0 +1,17 @@
+/*     Author: Richard Myatt
+          Date: 24 August 2018
+
+          An example of the use of the spreadMethod attribute
+          based on an example in chapter 8 of 'SVG Essentials'
+          by J. David Eisenberg.
+*/
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 640px;
+  text-align: justify;
+  margin-left: 20px;
+}

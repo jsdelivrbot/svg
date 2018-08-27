@@ -1,0 +1,64 @@
+<!--          Author: Richard Myatt
+              Date: 26 August 2018
+
+              An example of the use of SVG's textLength attribute based on a
+              similar example in chapter 9 of 'SVG Essentials' by J. David
+              Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/text_length.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG textLength</title>
+</head>
+<body>
+
+  <h1>SVG textLength</h1>
+
+  <svg width="300" height="200" viewBox="0 0 300 200"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG text - tspan tag</title>
+
+    <rect x="0" y="0" width="300" height="200"
+    style="fill: #fff; stroke: #000;" />
+
+    <g	style="font-size:	14pt;">
+
+      <!-- guide lines -->
+      <path	d="M	20	10	20	70	M	220	10	220	70"	style="stroke:	gray;"/>
+
+      <!-- the text with alternative spacing -->
+      <text	x="20"	y="30"
+      		textLength="200"	lengthAdjust="spacing">Two	words</text>
+      <text	x="20"	y="60"
+      		textLength="200"	lengthAdjust="spacingAndGlyphs">Two	words</text>
+
+      <!-- the text rendered normally -->
+      <text	x="20"	y="90">Two	words
+      		<tspan	style="font-size:	10pt;">(normal	length)</tspan></text>
+
+      <!-- guide lines -->
+      <path	d="M	20	100	20	170	M	100	100	100	170"	style="stroke:	gray;"/>
+
+      <!-- the text with alternative spacing -->
+      <text	x="20"	y="120"
+      		textLength="80"	lengthAdjust="spacing">Two	words</text>
+      <text	x="20"	y="160"
+      		textLength="80"	lengthAdjust="spacingAndGlyphs">Two	words</text>
+
+    </g>
+
+  </svg>
+
+  <div class="notes">
+    <p>An example of the use of the textLength attribute and the effect of setting lengthAdjust to 'spacing' (the default) or 'spacingAndGlyphs.'  This example is based on a similar example in chapter 9 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+/*          Author: Richard Myatt
+            Date: 24 August 2018
+
+            A trial use of an svg as a background image.
+*/
+
+body {
+  background-position: auto;
+  background-repeat: repeat;
+  background-image: url("https://cdn.rawgit.com/aronnax77/svg/617ff4f6/collection/ship.svg");
+  background-size: 10%;
+}
+
+/* Note that using an svg does not appear to be a good solution if the intention is to provide a full page backgrund when a raster image is probably a better choice */

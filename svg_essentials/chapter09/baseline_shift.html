@@ -1,0 +1,57 @@
+<!--        Author: Richard Myatt
+            Date: 25 August 2018
+
+            An example of the use of baseline-shift based on
+            a similar example in 'SVG Essentials' by J.
+            David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/baseline_shift.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG baseline-shift</title>
+</head>
+<body>
+
+  <h1>SVG baseline-shift</h1>
+
+  <svg width="400" height="120" viewBox="0 0 400 120"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG baseline-shift</title>
+
+    <!-- put a border around our demo -->
+    <rect x="0" y="0" width="400" height="250"
+    style="fill: #fff; stroke: #000;"></rect>
+
+    <!-- baseline-shift used for subscripts and superscripts -->
+    <!-- subscript example - formula for sugar -->
+    <text	x="20"	y="45"	style="font-size:	12pt;">
+    C<tspan	style="baseline-shift:	sub;">12</tspan>
+    H<tspan	style="baseline-shift:	sub;">22</tspan>
+    O<tspan	style="baseline-shift:	sub;">11</tspan>	(sugar)
+    </text>
+
+    <!-- superscript example -->
+    <text	x="20"	y="90"	style="font-size:	12pt;">
+    6.02	x	10<tspan	baseline-shift="super">23</tspan>
+    (Avogadro's	number)
+    </text>
+
+  </svg>
+
+  <div class="notes">
+    <p>This is a demonstration of SVG's baseline-shift which allows for the presentation of superscript and subscript in text elements.  The example here is based on a similar example in chapter 9 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>In the present example the text looks somewhat clumsy.  In practice the text for the superscript and subscript elements might sensibly be reduced in size.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+  <script src="js/baseline_shift.js"></script>
+
+</body>
+</html>

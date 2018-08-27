@@ -1,0 +1,21 @@
+/*          Author: Richard Myatt
+            Date: 25 August 2018
+
+            An example of the use of baseline-shift based on
+            a similar example in 'SVG Essentials' by J.
+            David Eisenberg.
+*/
+
+body {
+  background-color: lightgrey;
+}
+
+h1, svg {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

@@ -1,0 +1,69 @@
+<!--          Author: Richard Myatt
+              Date: 25 August 2018
+
+              SVG tspan demo based on examples in chapter 9 of 'SVG Essentials'
+              by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/tspan.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG text tspan tag</title>
+</head>
+<body>
+
+  <h1>SVG text - tspan tag</h1>
+
+  <svg width="400" height="250" viewBox="0 0 400 250"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG text - tspan tag</title>
+
+    <!-- put a border around our demo -->
+    <rect x="0" y="0" width="400" height="250"
+    style="fill: #fff; stroke: #000;"></rect>
+
+    <!-- use tspan to change styles -->
+    <text x="10" y="30" style="font-size: 12pt;">
+      Switch among
+      <tspan style="font-style: italic">italic</tspan>
+      and
+      <tspan style="font-weight: bold">bold</tspan>
+      text.
+    </text>
+
+    <!-- using dy to change vertical positioning -->
+    <text	x="30"	y="60"	style="font-size:12pt;">
+  		F	<tspan	dy="4">a</tspan>
+  		<tspan	dy="8">l</tspan>
+  		<tspan	dy="0">l</tspan>
+    </text>
+
+    <!-- use of absolute positioning -->
+    <text	x="10"	y="110"	style="font-size:12pt;">
+  		They	dined	on	mince,	and	slices	of	quince,
+  		<tspan	x="20"	y="130">Which	they	ate	with	a
+  				runcible	spoon;</tspan>
+  		<tspan	x="10"	y="150">And	hand	in	hand,	on	the	edge
+  				of	the	sand,</tspan>
+  		<tspan	x="20"	dy="20">They	danced	by	the	light	of	the	moon.</tspan>
+    </text>
+
+    <!-- use of multiple values of dx, dy, and rotate -->
+    <text	x="30"	y="210"	style="font-size:14pt">It’s
+      <tspan	dx="0	4	-3	5	-4	6"	dy="0	-3	7	3	-2	-8"		rotate="5	10	-5	-20	0	15">shaken</tspan>,
+      not	stirred.
+    </text>
+  </svg>
+
+  <div class="notes">
+    <p>The tspan tag acts much like the span tag and allows a selected portion of the text to be styled in a different way.  The examples here show a variety of styles and are based on similar examples in chapter 9 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
