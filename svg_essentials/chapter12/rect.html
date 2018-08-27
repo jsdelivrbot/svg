@@ -1,0 +1,42 @@
+<!--        Author: Richard Myatt
+            Date: 27 August 2018
+
+            A first SMIL animation.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/rect.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>First SMIL animation</title>
+</head>
+<body>
+
+  <h1>SVG A first SMIL animation</h1>
+
+  <svg width="220" height="40" viewBox="0 0 220 40"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>A first SMIL animation</title>
+
+    <rect x="10" y="10" width="200" height="20"
+      style="fill: none; stroke: #000;">
+        <animate
+          attributeName="width"
+          attributeType="XML"
+          from="200" to="20"
+          begin="0s" dur="5s"
+          fill="freeze" />
+      </rect>
+  </svg>
+
+  <div class="notes">
+    <p>This is a first SMIL (Synchronized Multimedia Integration Language) animation and is based on a similar animation presented in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/*          Author: Richard Myatt
+            Date: 27 August 2018
+
+            A first SMIL animation.
+*/
+
+h1, svg, .notes {
+  margin: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
