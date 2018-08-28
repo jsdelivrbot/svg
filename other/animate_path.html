@@ -1,0 +1,41 @@
+<!--        Author: Richard Myatt
+            Date: 28 August 2018
+
+            Exploring SVG animation techniques.  A first line
+            animation using css.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/animate_path.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animate path</title>
+</head>
+<body>
+
+  <h1>SVG line animation</h1>
+
+  <div class="container">
+    <svg width="500" height="200" viewBox="0 0 250 100"
+        xmlns="http://www.w3.org/2000/svg">
+        <title>Path to draw line</title>
+
+        <rect x="0" y="0" width="250" height="100"
+          style="fill: #fff; stroke: #000;" />
+
+        <path d="m 31.364203,128.16716 c 18.76084,9.34511 40.05574,13.23294 60.927102,11.50694 9.174325,-0.81388 19.464335,-1.6442 26.468815,-8.29588 4.79026,-5.34475 4.11533,-14.89186 -2.51393,-18.46268 -7.59785,-4.87494 -19.852608,-0.59534 -21.149555,8.80821 -2.298561,8.47808 6.324305,16.33684 14.485965,15.90456 13.13174,-0.46746 25.80708,-4.99327 37.72302,-10.25621 7.46136,-4.69296 16.74448,-3.66106 24.73752,-1.05663 6.00834,1.8957 11.79078,4.50469 17.25428,7.63516"
+          style="stroke: teal; stroke-width: 2; fill: none;"
+          transform="translate(0, -80)"/>
+
+    </svg>
+  </div>
+
+
+
+  <script src="js/animate_path.js"></script>
+
+</body>
+</html>

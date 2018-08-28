@@ -1,0 +1,38 @@
+/*          Author: Richard Myatt
+            Date: 28 August 2018
+
+            Exploring SVG animation techniques.  A first line
+            animation using css.
+*/
+
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+svg path {
+    stroke: #000;
+    stroke-width: 1;
+    stroke-dasharray: 247.780px;
+    stroke-dashoffset: 247.780px;
+    animation-name: draw;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
