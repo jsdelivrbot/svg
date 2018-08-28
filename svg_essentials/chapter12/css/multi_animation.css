@@ -1,0 +1,15 @@
+/*          Author: Richard Myatt
+            Date: 28 August 2018
+
+            Another SMIL animation showing how several attributes
+            can be animated on one object based on a similar
+            example in 'SVG Essentials' by J. David Eisenberg.
+*/
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin: 20px;
+}

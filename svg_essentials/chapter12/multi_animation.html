@@ -1,0 +1,41 @@
+<!--        Author: Richard Myatt
+            Date: 28 August 2018
+
+            Another SMIL animation showing how several attributes
+            can be animated on one object based on a similar
+            example in 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/multi_animation.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG multiple animations</title>
+</head>
+<body>
+
+  <h1>SVG multiple animations - one object</h1>
+
+  <svg width="220" height="170" viewBox="0 0 220 170"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>Multiple animations on one object demo</title>
+
+    <rect	x="10"	y="10"	width="20"	height="20"
+		  style="stroke:	black;	fill:	green;	style:	fill-opacity:	0.25;">
+  		<animate	attributeName="width"	attributeType="XML"
+  				from="20"	to="200"	begin="0s"	dur="8s"	fill="freeze"/>
+  		<animate	attributeName="height"	attributeType="XML"
+  				from="20"	to="150"	begin="0s"	dur="8s"	fill="freeze"/>
+  		<animate	attributeName="fill-opacity"	attributeType="CSS"
+  				from="0.25"	to="1"	begin="0s"	dur="5s"	fill="freeze"/>
+  		<animate	attributeName="fill-opacity"	attributeType="CSS"
+  				from="1"	to="0.25"	begin="5s"	dur="3s"	fill="freeze"/>
+    </rect>
+
+  </svg>
+
+</body>
+</html>

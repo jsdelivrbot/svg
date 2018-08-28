@@ -1,0 +1,43 @@
+<!--        Author: Richard Myatt
+            Date: 28 August 2018
+
+            A multiple object animation using SMIL based on an
+            example in chapter 12 of 'SVG Essentials' by J.
+            David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/multiobject.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG multi object animation</title>
+</head>
+<body>
+
+  <h1>SVG Multiple object animation</h1>
+
+  <svg width="440" height="320" viewBox="0 0 220 160"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>Multiple object animation demo</title>
+
+    <rect	x="10"	y="10"	width="20"	height="20"
+		style="stroke:	black;	fill:	#cfc;">
+		<animate	attributeName="width"	attributeType="XML"
+					begin="0s"	dur="8s"	from="20"	to="120"	fill="freeze"/>
+		<animate	attributeName="height"	attributeType="XML"
+					begin="0s"	dur="8s"	from="20"	to="120"	fill="freeze"/>
+    </rect>
+
+    <circle	cx="70"	cy="70"	r="20"
+    		style="fill:	#ccf;	stroke:	black;">
+    		<animate	attributeName="r"	attributeType="XML"
+    				begin="2s"	dur="4s"	from="20"	to="50"	fill="freeze"/>
+    </circle>
+
+  </svg>
+
+</body>
+</html>

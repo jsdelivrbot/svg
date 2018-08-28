@@ -1,0 +1,15 @@
+/*          Author: Richard Myatt
+            Date: 28 August 2018
+
+            A multiple object animation using SMIL based on an
+            example in chapter 12 of 'SVG Essentials' by J.
+            David Eisenberg.
+*/
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin: 20px;
+}
