@@ -1,0 +1,15 @@
+/*          Author: Richard Myatt
+            Date: 29 August 2018
+
+            An example of how SVG SMIL animations can be
+            synchronised based on a similar example from chapter 12
+            of 'SVG Essentials' by J. David Eisenberg.
+*/
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin: 20px;
+}

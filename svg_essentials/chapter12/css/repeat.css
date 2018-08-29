@@ -1,0 +1,15 @@
+/*          Author: Richard Myatt
+            Date: 29 August 2018
+
+            A SMIL animation which uses repeeatCount and repeatDur
+            based on a similar example in chapter 12 of 'svg
+            Essentials' by J. David Eisenberg.
+*/
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin: 20px;
+}
