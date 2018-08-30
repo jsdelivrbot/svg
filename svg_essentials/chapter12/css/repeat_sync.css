@@ -1,0 +1,22 @@
+/*          Author: Richard Myatt
+            Date: 30 August 2018
+
+            A demonstration of how an animation can be
+            synchronized to a repeatCount.  Based on a
+            similar example in chapter 12 of 'SVG
+            Essentials' by J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
