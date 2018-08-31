@@ -1,0 +1,23 @@
+/*            Author: Richard Myatt
+              Date: 1 September 2018
+
+              An example of the animation of a polygon and a
+              path using SMIL based on a similar example in
+              chapter 12 of 'SVG Essentials' by J. David
+              Eisenber.
+*/
+
+
+body {
+  background-color: #eee;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

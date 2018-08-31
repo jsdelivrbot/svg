@@ -1,0 +1,60 @@
+<!--          Author: Richard Myatt
+              Date: 1 September 2018
+
+              An example of the animation of a polygon and a
+              path using SMIL based on a similar example in
+              chapter 12 of 'SVG Essentials' by J. David
+              Eisenber.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/anim_path_poly.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG animate path/polygon</title>
+</head>
+<body>
+
+  <h1>SVG animate path/polygon</h1>
+
+  <svg width="360" height="480" viewBox="0 0 120 160"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>Animate path/polygon demo</title>
+
+    <!-- provide a white background to our demo -->
+    <rect x="0" y="0" width="120" height="160"
+      style="fill: #fff; stroke: none;" />
+
+    <polygon	points="30	30	70	30	90	70	10	70"
+		style="fill:#fcc;	stroke:black">
+		<animate	id="animation"
+				attributeName="points"
+				attributeType="XML"
+				to="50	30	70	50	50	90	30	50"
+				begin="0.5s"	dur="5.5s"	fill="freeze"	/>
+    </polygon>
+
+    <path	d="M15	50	Q	40	15,	50	50,	65	32,	100	40"
+    		style="fill:none;	stroke:	black"	transform="translate(0,50)">
+    		<animate	attributeName="d"
+    				attributeType="XML"
+    				to="M50	15	Q	15	40,	50	50,	32	65,	40	100"
+    				begin="0.5s"	dur="5.5s"	fill="freeze"/>
+    </path>
+
+  </svg>
+
+  <div class="notes">
+    <p>An example of animating a polygon and a path using SMIL.</p>
+
+    <p>This example is based on a similar example in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+
+</body>
+</html>
