@@ -1,0 +1,46 @@
+<!--        Author: Richard Myatt
+            Date: 1 September 2018
+
+            An example of linear motion using animateMotion based on
+            a similar example in 'SVG Essentials' by J. David
+            Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/linear_motion.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG linear motion</title>
+</head>
+<body>
+
+  <h1>SVG linear motion demo</h1>
+
+  <svg width="330" height="240" viewBox="0 0 110 80"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>linear motion demo</title>
+
+    <!-- put a white background on the canvas -->
+    <rect x="0" y="0" width="110" height="80"
+      style="fill: #fff; stroke: none;" />
+
+    <g>
+  		<rect	x="0"	y="0"	width="30"	height="30"	style="fill:	#ccc;"/>
+  		<circle	cx="30"	cy="30"	r="15"	style="fill:	#cfc;	stroke:
+      green;"/>
+      		<animateMotion	from="0,0"	to="60,30"	dur="4s"	fill="freeze"/>
+    </g>
+
+  </svg>
+
+  <div class="notes">
+    <p>animateMotion allows the animation of SVG shapes along lines and paths.  This is an example of linear motion along a line and is based on a similar example in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>

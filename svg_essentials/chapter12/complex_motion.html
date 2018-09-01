@@ -1,0 +1,52 @@
+<!--        Author: Richard Myatt
+            Date: 1 September 2018
+
+            An example of complex motion along a path based on a
+            similar example in 'SVG Essentials' by J. David
+            Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/complex_motion.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Complex Motion</title>
+</head>
+<body>
+
+  <h1>SVG complex motion demo</h1>
+
+  <svg width="440" height="400" viewBox="0 0 220 200"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>linear motion demo</title>
+
+    <!-- put a white background on the canvas -->
+    <rect x="0" y="0" width="220" height="200"
+      style="fill: #fff; stroke: none;" />
+
+      <!--	show	the	path	along	which	the	triangle	will	move	-->
+    <path	d="M10,125	C	100,25	150,225,	200,	125"
+    		style="fill:	none;	stroke:	blue;"/>
+
+    <!--	Triangle	to	be	moved	along	the	motion	path -->
+    <path	d="M-10,-3	L10,-3	L0,-25z"
+      style="fill:	yellow;	stroke:	red;">
+  		<animateMotion
+  				path="M10,125	C	100,25	150,225,	200,	125"
+  				dur="6s"	fill="freeze"/>
+    </path>
+
+  </svg>
+
+  <div class="notes">
+    <p>An example of complex motion along a path based on an
+    example in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
