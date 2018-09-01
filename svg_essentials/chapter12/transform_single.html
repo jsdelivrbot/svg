@@ -1,0 +1,49 @@
+<!--            Author: Richard Myatt
+                Date: 1 September 2018
+
+                A demonstration of animateTransform using a single
+                transformation property.  Based on a similar example
+                in chapter 12 of 'SVG Essentials' by J. David
+                Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/transform_single.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG single transform</title>
+</head>
+<body>
+
+  <h1>SVG single transform demo</h1>
+
+  <svg width="400" height="260" viewBox="0 0 200 130"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>single transform demo</title>
+
+    <!-- put a white background on the canvas -->
+    <rect x="0" y="0" width="200" height="130"
+      style="fill: #fff; stroke: none;" />
+
+      <g	transform="translate(100,60)">
+  		<rect	x="-10"	y="-10"	width="20"	height="20"
+  				style="fill:	#ff9;	stroke:	black;">
+  				<animateTransform	attributeType="XML"
+  						attributeName="transform"	type="scale"
+  						from="1"	to="4	2"
+  						begin="0s"	dur="4s"	fill="freeze"/>
+  		</rect></g>
+
+    </svg>
+
+    <div class="notes">
+      <p>An example of transform animation of a single property, in this case scale.  This example is based on a similar example in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+      <p>Please see accompanying code.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--         Author: Richard Myatt
+            Date: 1 September 2018
+
+            An example of the use of animateTransform applied to
+            multiple properties based on a similar example in
+            chapter 12 of 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/transform_multi.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Multiple Transform</title>
+</head>
+<body>
+
+  <h1>SVG multiple transform demo</h1>
+
+  <svg width="240" height="300" viewBox="0 0 240 300"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>multiple transform demo</title>
+
+    <!-- put a white background on the canvas -->
+    <rect x="0" y="0" width="240" height="300"
+      style="fill: #fff; stroke: none;" />
+
+    <rect	x="90"	y="50"	width="20"	height="20"
+		style="fill:	#ff9;	stroke:	black;">
+  		<animateTransform	attributeName="transform"	attributeType="XML"
+  				type="scale"	from="1"	to="4	2"
+  				additive="sum"	begin="0s"	dur="4s"	fill="freeze"/>
+  		<animateTransform	attributeName="transform"	attributeType="XML"
+  				type="rotate"	from="0"	to="45"
+				additive="sum"	begin="0s"	dur="4s"	fill="freeze"/>
+    </rect>
+
+  </svg>
+
+  <div class="notes">
+    <p>An example of a transform animation of multiple properties, in this case scale, and rotate.  This example is based on a similar example in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
