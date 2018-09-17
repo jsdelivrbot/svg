@@ -1,0 +1,22 @@
+/*          Author: Richard Myatt
+            Date: 2 September 2018
+
+            An example of the use of keyPoints, keyTimes, and
+            calcMode in an SVG animation based on a similar
+            example in chapter 12 of 'SVG Essentials' by
+            J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

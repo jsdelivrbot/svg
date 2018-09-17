@@ -1,0 +1,65 @@
+/*            Author: Richard Myatt
+              Date: 17 September 2018
+
+              An example of the use of css to animate an svg based on a similar
+              example in 'SVG Essentials' by J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+}
+
+/* style the background of the svg */
+#bg {
+  fill: #fff;
+  stroke: none;
+}
+
+/* style the main graphic */
+#star	{
+  fill: #008000;
+  stroke: #008000;
+  /* include details for animation */
+	animation-name:	starAnim;
+	animation-duration:	4s;
+	animation-iteration-count:	5;
+	animation-direction:	alternate;
+	animation-timing-function:	ease;
+	animation-play-state:	running;
+  animation-fill-mode: forwards;
+  transform:	translate(100px,	50px);
+}
+
+/* keyframes specification for animation */
+@keyframes	starAnim	{
+	0%	{
+			fill-opacity:	1.0;
+			stroke-width:	0;
+	}
+  20%	{
+				transform:	translate(100px,	50px)
+	}
+	50%	{				transform:	translate(100px,	50px)	rotate(180deg)
+	}
+	80%	{
+			transform:	translate(100px,	50px)	rotate(360deg)
+	}
+	100%	{
+			fill-opacity:	0;
+			stroke-width:	6;
+      transform: translate(100px, 100px);
+	}
+}

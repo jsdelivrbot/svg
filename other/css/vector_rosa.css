@@ -1,0 +1,15 @@
+/*            Author: Richard Myatt
+              Date: 11 September 2018
+
+              An experiment in converting a raster image into an svg..
+*/
+
+
+h1, div, svg {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 300px;
+  text-align: justify;
+}

@@ -1,0 +1,54 @@
+
+<!--          Author: Richard Myatt
+              Date: 17 September 2018
+
+              An example of the use of css to animate an svg based on a similar
+              example in 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/drained_star.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drained star</title>
+</head>
+<body>
+
+  <h1>SGV CSS animation demo 01</h1>
+
+  <svg	width="400"	height="300"	viewBox="0	0	200	150"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>SVG CSS animation demo</title>
+
+    <!-- define the star shape for later use -->
+		<defs>
+				<g	id="starDef">
+						<path	d="M	38.042	-12.361	9.405	-12.944	-0.000	-40.000
+								-9.405	-12.944	-38.042	-12.361	-15.217	4.944
+								-23.511	32.361	0.000	16.000	23.511	32.361	15.217	4.944	Z"/>
+				</g>
+		</defs>
+
+    <!-- provide a white background for the animation -->
+    <!-- please note that styling is provided in the css -->
+    <rect id="bg" x="0" y="0" width="200" height="200" />
+
+    <!-- display the star shape -->
+    <!-- animate the graphic using css -->
+    <!-- please note that styling is provided in the css -->
+		<use	id="star"	xlink:href="#starDef"
+				transform="translate(100, 100)" />
+</svg>
+
+<div class="notes">
+  <p>An example of using css to animate an svg based on a similar example in chapter 12 of 'SVG Essentials' by J. David Eisenberg</p>
+
+  <p>Please see accompanying code.</p>
+</div>
+
+
+</body>
+</html>

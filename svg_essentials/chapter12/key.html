@@ -1,0 +1,57 @@
+<!--         Author: Richard Myatt
+            Date: 2 September 2018
+
+            An example of the use of keyPoints, keyTimes, and
+            calcMode in an SVG animation based on a similar
+            example in chapter 12 of 'SVG Essentials' by
+            J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/key.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG keyPoints, keyTimes, and calcMode</title>
+</head>
+<body>
+
+  <h1>SVG keyPoints, keyTimes, and calcMode</h1>
+
+  <svg width="440" height="400" viewBox="0 0 220 200"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>keyPoints, keyTimes, and calcMode demo</title>
+
+    <!-- put a white background on the canvas -->
+    <rect x="0" y="0" width="220" height="200"
+      style="fill: #fff; stroke: none;" />
+
+    <!--	show	the	path	along	which	the	triangle	will	move	-->
+    <path	d="M10,125	C	100,25	150,225,	200,	125"
+        style="fill:	none;	stroke:	blue;"/>
+
+    <path	d="M-10,-3	L10,-3	L0,-25z"
+      style="fill:	yellow;	stroke:	red;">
+  		<animateMotion
+  				path="M10,125	C	100,25	150,225,	200,	125"
+  				rotate="auto"
+  				keyPoints="0;0.2;0.8;1"
+  				keyTimes="0;0.33;0.66;1"
+  				calcMode="linear"
+  				dur="6s"	fill="freeze"/>
+    </path>
+
+  </svg>
+
+  <div class="notes">
+    <p>An example of the use of keyPoints, keyTimes, and calcMode when animating an SVG.  The calcMode determines how the overall timing of the animation is conducted.  The keyPoints attribute allows certain points during the animation to be designated and tied to a change in pace using the keyTimes attribute.</p>
+
+    <p>This example is based on a similar example in chapter 12 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
