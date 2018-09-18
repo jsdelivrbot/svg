@@ -1,0 +1,154 @@
+<!--          Author: Richard Myatt
+              Date: 18 September 2018
+
+              A demonstration of the use of the anchor element within an svg.
+              Based on a similar example in chapter 13 of 'SVG Essentials' by
+              J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/anchor.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG with anchor element</title>
+</head>
+<body>
+
+  <h1>SVG with anchor element</h1>
+
+  <!-- svg canvas and images, styles taken from the css stylesheet -->
+  <svg width="400" height="340" viewBox="0 0 400 340"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org">
+    <title>SVG with anchor element demo</title>
+
+    <!-- define two geometric shapes to use as links -->
+    <defs>
+      <!-- a circle -->
+      <circle id="circle" cx="50" cy="50" r="50" />
+
+      <!-- a square -->
+      <rect id="square" x="0" y="0" width="100" height="100" />
+
+    </defs>
+
+    <!-- provide a white background -->
+    <rect id="bg" x="0" y="0" width="100%" height="100%" />
+
+    <!-- link to sololearn using text -->
+    <a href="https://www.sololearn.com/" target="_blank">
+      <text x="50%" y="50" text-anchor="middle">SOLOLEARN</text>
+    </a>
+
+    <!-- link to instagram -->
+    <a href="https://www.instagram.com/" target="_blank">
+
+      <!-- instagram icon -->
+      <svg x="66" y="100" width="100" height="100">
+        <title>Instagram icon</title>
+
+        <!-- gradient fill -->
+        <defs>
+          <linearGradient id="grad" x1="0" y1="0" x2="0" y2="100"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" style="stop-color: #7124c3" />
+            <stop offset="30%" style="stop-color: #c11976" />
+            <stop offset="100%" style="stop-color: #df993d" />
+          </linearGradient>
+        </defs>
+
+        <!-- outer rectangle -->
+        <rect x="0" y="0" width="100" height="100" rx="27" ry="27"
+          style="fill: url(#grad); stroke: none;" />
+
+        <!-- inner rectangle -->
+        <rect x="10" y="10" width="80" height="80" rx="22" ry="22"
+          style="fill: #fff; stroke: none;" />
+
+        <!-- outer central circle -->
+        <circle cx="50" cy="50" r="25"
+            style="fill: url(#grad); stroke: none;" />
+
+        <!-- inner central circle -->
+        <circle cx="50" cy="50" r="15"
+            style="fill: #fff; stroke: none;" />
+
+        <!-- small circle - upper right -->
+        <circle cx="74" cy="24" r="6"
+            style="fill: url(#grad); stroke: none;" />
+        ></circle>
+
+      </svg>
+    </a>
+
+    <!-- link to facebook -->
+    <a href="https://en-gb.facebook.com/" target="_blank">
+
+      <!-- facebook icon -->
+      <svg x="224" y="100" width="100" height="100">
+          <title>Facebook icon</title>
+
+          <!-- gradient fill -->
+          <defs>
+            <linearGradient id="google" x1="0%" y1="0%" x2="0%" y2="100%"
+            gradientUnits="objectBoundingBox">
+              <stop offset="0%" style="stop-color: #6186d1" />
+              <stop offset="100%" style="stop-color: #2d4a86" />
+            </linearGradient>
+          </defs>
+
+          <!-- our icon -->
+          <g style="fill: url(#google); stroke: none;"
+                    transform="scale(0.218) translate(2, 2)">
+
+            <!-- background fill for the f -->
+            <rect x="0" y="0" width="440" height="440" cx="45" cy="45"
+              style="fill: #fff; stroke: none;" />
+
+            <!-- main outline -->
+            <path d="M 305 440 H 395 A 45 45 0 0 0 440 395
+                    V 45 A 45 45 0 0 0 395 0
+                    H 45 A 45 45 0 0 0 0 45
+                    V 395 A 45 45 0 0 0 45 440
+                    H 215 A 10 10 0 0 0 225 430
+                    V 295 A 10 10 0 0 0 215 285
+                    H 175 A 10 10 0 0 1 165 275
+                    V 225 A 10 10 0 0 1 175 215
+                    H 215 A 10 10 0 0 0 225 205
+                    V 140 A 70 70 0 0 1 295 70
+                    H 340 A 10 10 0 0 1 350 80
+                    V 130 A 10 10 0 0 1 340 140
+                    H 315 A 20 20 0 0 0 295 160
+                    V 205 A 10 10 0 0 0 305 215
+                    H 340 A 10 10 0 0 1 350 225
+                    V 275 A 10 10 0 0 1 340 285
+                    H 305 A 10 10 0 0 0 295 295
+                    V 430 A 10 10 0 0 0 305 440 z" />
+          </g>
+
+       </svg>
+    </a>
+
+    <!-- link to www.w3.org/SVG/ -->
+    <a href="http://www.w3.org/SVG/" target="_blank">
+
+      <use xlink:href="#circle" x="66" y="220" />
+      <use xlink:href="#square" x="224" y="220" />
+    </a>
+
+  </svg>
+
+  <div class="notes">
+    <p>A demonstration of the use of the anchor element within an SVG canvas.  In this case the word SOLOLEARN links to the home page of sololearn's site, the instagram and facebook icons link to the home pages of instagram and facebook and the two geometric shapes link to www.w3/SVG/.</p>
+
+    <p>The two media icons can be viewed at https://code.sololearn.com/W76DfcE1dyQk/#html</p>
+
+    <p>This example is based on a similar example in chapter 13 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see the accompanying code.</p>
+  </div>
+
+</body>
+</html>

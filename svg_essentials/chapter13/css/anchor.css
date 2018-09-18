@@ -1,0 +1,38 @@
+/*            Author: Richard Myatt
+              Date: 18 September 2018
+
+              A demonstration of the use of the anchor element within an svg.
+              Based on a similar example in chapter 13 of 'SVG Essentials' by
+              J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+#bg {
+  fill: #fff;
+}
+
+#circle, #square {
+  fill: red;
+}
+
+text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 25px;
+
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 400px;
+  text-align: justify;
+}
