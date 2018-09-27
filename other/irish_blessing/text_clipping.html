@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/text_clipping.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG text clipping</title>
+</head>
+<body>
+
+  <h1>SVG text clipping</h1>
+
+  <svg width="100" height="100" viewBox="0 0 100 100"
+       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <title>SVG text clipping demo</title>
+
+       <!-- define clip path -->
+       <defs>
+         <clipPath id="textPath">
+           <text id="clip" x="50" y="70">T</text>
+         </clipPath>
+       </defs>
+
+       <!-- provide a white background -->
+       <rect id="bg" x="0" y="0" width="100%" height="100%" />
+
+       <!-- text our path -->
+       <rect x="0" y="0" width="100" height="100"
+         style="fill: red; stroke: none; clip-path: url(#textPath);"
+       ></rect>
+
+    </svg>
+
+</body>
+</html>

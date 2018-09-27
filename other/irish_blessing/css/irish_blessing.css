@@ -1,0 +1,89 @@
+/*                Author: Richard Myatt
+                  Date: 26 September 2018
+                  Revised: 27 September 2018 - display on smaller screens
+                  improved.  Autoprefixer applied.
+
+                  An animated irish blessing.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 60vw;
+  height: 20vw;
+  border-radius: 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 5px 8px 3px #888;
+}
+
+@media only screen and (max-width: 1400px) {* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 60vw;
+  height: 20vw;
+  border-radius: 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 8px 3px #888;
+          box-shadow: 5px 8px 3px #888;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  h1 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    width: 80vw;
+    height: 26.67vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 95vw;
+    height: 31.67vw;
+  }
+}

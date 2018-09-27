@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/clickvue.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG and click event with Vue.js</title>
+</head>
+<body>
+
+  <h1>SVG and click event with Vue.js</h1>
+
+  <div id="app">
+    <svg width="100" height="50" viewBox="0 0 100 50"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Up arrow</title>
+
+      <rect ref="rect" x="0" y="0" width="100" height="50"
+        @mouseenter="change"
+        @mouseleave="revert"
+        @click="clicked"/>
+
+      <path ref="path" d="M 0 50 L 50 0 L 100 50"
+       @mouseover="change" />
+
+    </svg>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="js/clickvue.js"></script>
+
+</body>
+</html>

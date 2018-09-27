@@ -1,0 +1,159 @@
+<!--        Author: Richard Myatt
+            Date: 20 September 2018
+
+            Revised: 22 September 2018 - Anchor elements removed.
+            Mouse events improved.  Clickable area increased.
+
+            An svg counter similar to that used by SL.  Because
+            this is written as an svg it can easily be resized.
+
+            Please contrast this counter with those previously
+            posted here at:
+            https://code.sololearn.com/Wn6r7eQ3kwli/#html and
+            https://code.sololearn.com/WsX7DwcDjvdt/#html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/revised_counter.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG counter (revised)</title>
+</head>
+<body>
+
+  <h1>SVG counter (revised)</h1>
+
+  <br>
+
+  <!-- Vue.js application block -->
+  <div id="counter-app">
+    <horizontal-counter></horizontal-counter>
+
+    <br>
+    <br>
+    <br>
+
+    <vertical-counter></vertical-counter>
+  </div><!-- end of Vue.js application block -->
+
+
+  <!-- template for horizontal counter -->
+  <template id="horizontal-counter">
+    <div>
+
+      <!-- display the counter -->
+      <svg width="180" height="50" viewBox="0 0 180 50"
+       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <title>SVG counter demo</title>
+
+       <!-- temporary white background -->
+       <rect id="counter-bg" x="0" y="0" width="100%" height="100%" />
+
+       <!--display the up arrow -->
+       <svg x="5" y="15" width="40" height="20" viewBox="0 0 100 50">
+
+         <g
+          @mouseover="enterUpArea"
+          @mouseout="leaveUpArea"
+          @click="inc" >
+          <title>Up arrow</title>
+
+           <!-- clickable area -->
+           <rect id="up-arrow-rect" ref="upArrowRect" x="0" y="0" width="100" height="50" />
+
+           <!-- up arrow glyph -->
+           <path id="up-arrow-path" ref="upArrowPath" d="M 0 50 L 50 0 L 100 50" />
+         </g>
+
+       </svg>
+
+       <!-- display the down arrow -->
+       <svg x="135" y="15" width="40" height="20" viewBox="0 0 100 50">
+
+         <g
+          @mouseover="enterDownArea"
+          @mouseout="leaveDownArea"
+          @click="dec" >
+          <title>Up arrow</title>
+
+           <!-- clickable area -->
+           <rect id="down-arrow-rect" ref="downArrowRect" x="0" y="0" width="100" height="50" />
+
+           <!-- up arrow glyph -->
+           <path id="down-arrow-path" ref="downArrowPath" d="M 0 0 L 50 50 L 100 0" />
+         </g>
+
+       </svg>
+
+       <!-- display the number of counts -->
+       <text class="txt" x="90" y="35"
+          >{{ output }}</text>
+
+     </svg>
+    </div>
+  </template>
+
+  <!-- template for vertical counter -->
+  <template id="vertical-counter">
+    <div>
+
+      <!-- display the counter -->
+      <svg width="70" height="160" viewBox="0 0 70 160"
+       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <title>SVG counter demo</title>
+
+       <!-- temporary white background -->
+       <rect id="counter-bg" x="0" y="0" width="100%" height="100%" />
+
+       <!--display the up arrow -->
+       <svg x="15" y="5" width="40" height="20" viewBox="0 0 100 50">
+
+         <g
+          @mouseover="enterUpArea"
+          @mouseout="leaveUpArea"
+          @click="inc" >
+          <title>Up arrow</title>
+
+           <!-- clickable area -->
+           <rect id="up-arrow-rect" ref="upArrowRect" x="0" y="0" width="100" height="50" />
+
+           <!-- up arrow glyph -->
+           <path id="up-arrow-path" ref="upArrowPath" d="M 0 50 L 50 0 L 100 50" />
+         </g>
+
+       </svg>
+
+       <!-- display the down arrow -->
+       <svg x="15" y="135" width="40" height="20" viewBox="0 0 100 50">
+
+         <g
+          @mouseover="enterDownArea"
+          @mouseout="leaveDownArea"
+          @click="dec" >
+          <title>Up arrow</title>
+
+           <!-- clickable area -->
+           <rect id="down-arrow-rect" ref="downArrowRect" x="0" y="0" width="100" height="50" />
+
+           <!-- up arrow glyph -->
+           <path id="down-arrow-path" ref="downArrowPath" d="M 0 0 L 50 50 L 100 0" />
+         </g>
+
+       </svg>
+
+       <!-- display the number of counts -->
+       <text class="txt" x="35" y="90"
+          >{{ output }}</text>
+
+     </svg>
+    </div>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="js/revised_counter.js"></script>
+
+</body>
+</html>

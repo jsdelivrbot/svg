@@ -1,0 +1,16 @@
+body {
+  background-color: #eee;
+}
+
+rect {
+  fill: none;
+  stroke: none;
+  pointer-events: visibleFill;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 6px;
+
+}

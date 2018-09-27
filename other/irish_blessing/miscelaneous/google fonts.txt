@@ -1,0 +1,6 @@
+cd && wget https://raw.githubusercontent.com/hotice/webupd8/master/install-google-fonts
+chmod +x install-google-fonts
+./install-google-fonts
+
+
+http://www.webupd8.org/2011/01/automatically-install-all-google-web.html
