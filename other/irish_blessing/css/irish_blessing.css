@@ -10,31 +10,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: #eee;
-}
-
-h1 {
-  font-size: 25px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.container {
-  width: 60vw;
-  height: 20vw;
-  border-radius: 15px;
-  margin: 0 auto;
-  overflow: hidden;
-  box-shadow: 5px 8px 3px #888;
-}
-
-@media only screen and (max-width: 1400px) {* {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -59,6 +34,7 @@ h1 {
   -webkit-box-shadow: 5px 8px 3px #888;
           box-shadow: 5px 8px 3px #888;
 }
+
 
 @media only screen and (max-width: 1400px) {
 
