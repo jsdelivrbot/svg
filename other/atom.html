@@ -1,0 +1,90 @@
+<!--                Author: Richard Myatt
+                    Date: 28 September 2018
+
+                    rgb in motion - animation.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/atom.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rgb in motion</title>
+</head>
+<body>
+
+
+  <div class="container">
+    <svg width="100%" height="100%" viewBox="0 0 120 120"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>rgb in motion</title>
+
+      <!-- provide a white background -->
+      <rect x="0" y="0" width="100%" height="100%"
+       style="fill: #333; stroke: none;" />
+
+      <svg x= "10" y="10" width="100px" height="100px" viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <!-- define elipse -->
+        <defs>
+             <path d="M 5 50 C 5 30 95 30 95 50 C 95 70 5 70 5 50"
+               style="fill: none; stroke: #eee; stroke-width: 2" id="motionPath1" />
+
+             <path d="M 27.5 11.03 C 44.82 1.03 89.82 78.97 72.5 88.97
+                       C 55.18 98.97 10.18 21.03 27.5 11.03"
+               style="fill: none; stroke: #eee; stroke-width: 2" id="motionPath2" />
+
+             <path d="M 72.5 11.03 C 89.82 21.03 44.82 98.97 27.5 88.97
+                       C 10.18 78.97 55.18 1.03 72.5 11.03"
+               style="fill: none; stroke: #eee; stroke-width: 2" id="motionPath3" />
+        </defs>
+
+        <!-- display the paths -->
+        <use xlink:href="#motionPath1" />
+        <use xlink:href="#motionPath2" />
+        <use xlink:href="#motionPath3" />
+
+        <!-- animate the red circle -->
+        <circle cx="0" cy="0" r="4"
+          style="fill: red; stroke: none;">
+
+          <!-- animate motion along the path -->
+          <animateMotion  dur="4s" repeatCount="indefinite">
+            <mpath xlink:href="#motionPath1" />
+          </animateMotion>
+
+        </circle>
+
+        <!-- animate the green circle -->
+        <circle cx="0" cy="0" r="4"
+          style="fill: green; stroke: none;">
+
+          <!-- animate motion along the path -->
+          <animateMotion  dur="4.5s" repeatCount="indefinite">
+            <mpath xlink:href="#motionPath2" />
+          </animateMotion>
+
+        </circle>
+
+        <!-- animate the blue circle -->
+        <circle cx="0" cy="0" r="4"
+          style="fill: blue; stroke: none;">
+
+          <!-- animate motion along the path -->
+          <animateMotion  dur="5s" repeatCount="indefinite">
+            <mpath xlink:href="#motionPath3" />
+          </animateMotion>
+
+        </circle>
+
+      </svg>
+
+  </svg>
+
+  </div>
+
+</body>
+</html>

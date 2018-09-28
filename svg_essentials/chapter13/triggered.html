@@ -1,0 +1,55 @@
+<!--          Author: Richard Myatt
+              Date: 28 September 2018
+
+              An example of a mouse event used to trigger a SMIL
+              animation based on a similar example in chapter 13 of
+              'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/triggered.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Triggered animation</title>
+</head>
+<body>
+
+  <h1>Triggered SMIL animation</h1>
+
+  <svg width="360" height="240" viewBox="0 0 180 120"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Triggered SMIL animation</title>
+
+      <!-- provide a white background -->
+      <rect x="0" y="0" width="300" height="300"
+        style="fill: #fff; stroke: none;" />
+
+      <g	id="button">
+      		<rect	x="10"	y="10"	width="50"	height="25"	rx="4"	ry="4"
+      				/>
+      		<text	x="35"	y="26"
+      				style="text-anchor:	middle;	font-size:	8pt; font-weight: bold;">Start</text>
+      </g>
+
+      <g	transform="translate(120,	80)">
+      		<path	d="M-25	-15,	0	-15,	25	15,	-25	15	Z"
+      				style="stroke:	gray;	fill:	#699;" id="test">				<animateTransform	id="trapezoid"	attributeName="transform"
+      						type="rotate"	from="0"	to="360"
+      						begin="button.click"
+      						dur="6s"/>
+      		</path>
+      </g>
+
+  </svg>
+
+  <div class="notes">
+    <p>This is an example of how a SMIL animation can be triggered by an internal mouse event and is taken from a similar example in chapter 13 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
