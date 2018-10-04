@@ -1,0 +1,52 @@
+<!--          Author: Richard Myatt
+              Date: 4 October 2018
+
+              An exercise in defining motion around an infinity symbol.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/infinity.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Perpetual Motion</title>
+</head>
+<body>
+
+  <!-- paint a full window background -->
+  <div class="bg">
+
+    <!-- display the svg within a container positioned in the center of the page -->
+    <div class="container">
+      <svg	width="100%"	height="100%"	viewBox="0 0 211.66666 105.83334"
+    		xmlns="http://www.w3.org/2000/svg"
+    		xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+    		<title>Perpetual Motion</title>
+
+        <!-- define a path in the shape of an infinity symbol -->
+        <defs>
+          <path
+             style="fill: none; stroke: #eee; stroke-width: 3px; stroke-opacity: 0.2" id="infinity"
+             d="m 103.81117,52.984018 c 0,0 12.09729,15.045973 27.39828,27.214036 11.84234,9.417591 17.86541,16.512488 36.61861,16.669777 16.8294,0.141154 38.53596,-14.62794 37.9068,-44.198392 -0.62916,-29.570455 -27.52569,-40.580731 -37.74951,-40.738021 -10.22383,-0.157289 -27.52569,6.606166 -42.15363,21.705974 -14.62794,15.099805 -44.51297,45.299417 -44.51297,45.299417 0,0 -17.773732,18.40289 -38.221385,17.931022 C 22.64971,96.395962 5.1905585,75.476438 5.0332687,54.242334 4.8759792,33.008231 22.177841,12.560577 43.726523,12.245998 c 21.548682,-0.31458 42.782786,22.49242 42.782786,22.49242 z" />
+        </defs>
+
+        <!-- draw the infinity symbol on the page -->
+        <use xlink:href="#infinity" />
+
+        <!-- animate a small circle -->
+        <circle cx="0" cy="0" r="3"
+          style="fill: yellow; stroke: none;">
+          <animateMotion dur="10s" repeatCount="indefinite">
+            <mpath xlink:href="#infinity" />
+          </animateMotion>
+        </circle>
+
+      </svg>
+    </div>
+
+  </div>
+
+</body>
+</html>
