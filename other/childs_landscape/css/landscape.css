@@ -1,0 +1,19 @@
+/*          Author: Richard Myatt
+              Date: 7 October 2018
+
+              Experimenting with svg.  A childs landscape used as a full screen
+              background image.  Produced using Inkscape.
+*/
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  background-image: url("../svg/childs_landscape.svg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
