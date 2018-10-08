@@ -93,6 +93,9 @@
             obj.addEventListener("mousedown",	startColorDrag,	false);
             obj.addEventListener("mousemove",	doColorDrag,	false);
             obj.addEventListener("mouseup",	endColorDrag,	false);
+
+            // let the background capture the mouseup events
+            document.getElementById("eventCatcher").addEventListener("mouseup",	endColorDrag,	false);
 					}
 					transformShirt();
 				}
@@ -158,8 +161,8 @@
 						A	6.5	6	0	0	1	-6	-30"/>
     </defs>
 
-    <!-- provide a white background -->
-    <rect x="0" y="0" width="400" height="250" class="bg"></rect>
+    <!-- provide a white background and also capture mouseup events -->
+    <rect id="eventCatcher" x="0" y="0" width="400" height="250" class="bg"></rect>
 
     <!-- draw the shirt -->
     <g id="shirt">
