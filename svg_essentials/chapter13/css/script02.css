@@ -1,0 +1,25 @@
+/*            Author: Richard Myatt
+              Date: 8 October 2018
+
+              An example of the use of both style and script within the svg
+              document based on a similar example in chapter 13 of 'SVG
+              Essentials' by J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
