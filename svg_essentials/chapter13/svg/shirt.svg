@@ -150,15 +150,15 @@
 
   <!-- draw the three buttons -->
   <g	id="scale0"	>
-      <rect	x="20"	y="10"	width="30"	height="30"	rx=5 ry=5 />
+      <rect	x="20"	y="10"	width="30"	height="30"	rx="5" ry="5" />
       <text	x="35"	y="30">S</text>
   </g>
   <g	id="scale1"	class="selected">
-      <rect	x="60"	y="10"	width="30"	height="30"	rx=5 ry=5 />
+      <rect	x="60"	y="10"	width="30"	height="30"	rx="5" ry="5" />
       <text	x="75"	y="30">M</text>
   </g>
   <g	id="scale2"	>
-      <rect	x="100"	y="10"	width="30"	height="30"	rx=5 ry=5 />
+      <rect	x="100"	y="10"	width="30"	height="30"	rx="5" ry="5" />
       <text	x="115"	y="30">L</text>
   </g>
 
