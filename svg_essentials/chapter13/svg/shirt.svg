@@ -1,3 +1,14 @@
+<!--              Author: Richard Myatt
+                  Date: 11 October 2018
+
+                  This page contains the contents of the svg file used in the
+                  html at https://code.sololearn.com/W52tgeg7Em3a/#html and
+                  should be read in conjunction with that page.
+
+                  This example is based on a similar example in chapter 13 of
+                  'SVG Essentials' by J. David Eisenberg.
+-->
+
 <svg	width="480"	height="375"	viewBox="0 0 320 250"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -52,7 +63,7 @@
     </style>
 
     <!-- define the script for the application -->
-    <script type="application/ecmascript">
+    <script id="svgScript" type="application/ecmascript">
     <![CDATA[
 
       var	scaleChoice	=	1;  // initial button selected
@@ -76,6 +87,12 @@
           // let the background capture the mouseup events
           document.getElementById("eventCatcher").addEventListener("mouseup",	endColorDrag,	false);
         }
+
+        // establish two way communication with the web page
+        if	(parent)	{
+								parent.setShirtColor	=	svgSetShirtColor;
+			  }
+
         transformShirt();
       }
 
@@ -105,31 +122,40 @@
       }
 
       function	endColorDrag(evt)	{
-        slideChoice	=	-1;
+        if	(slideChoice	>=	0)	{
+        if	(parent)
+          parent.updateHTMLField(slideChoice,	rgb[slideChoice]);
+				}
+
+        //	In	any	case,	nobody's	being	dragged	now
+		    slideChoice	=	-1;
       }
 
       function	doColorDrag(evt)	{
-        var	sliderId	=	evt.target.parentNode.getAttribute("id");
-        chosen	=	parseInt(sliderId[sliderId.length	-	1]);
+      		if	(slideChoice	>=	0)	{
+      				var	sliderId	=	evt.target.parentNode.getAttribute("id");
+      				chosen	=	parseInt(sliderId[sliderId.length	-	1]);
+      				if	(slideChoice	==	chosen)	{
+      						svgSetShirtColor(slideChoice,	100	-	(evt.clientY	-	10));
+      				}
+      		}
+      }
 
-        if	(slideChoice	>=	0	&&	slideChoice	==	chosen)	{
-          var	obj	=	evt.target;
-          var	pos	=	evt.clientY	-	75;
-          if	(pos	<	0)	{	pos	=	0;	}
-          if	(pos	>	100)	{	pos	=	100;	}
-
-          obj	=	document.getElementById("slide"	+	slideChoice);
-          obj.setAttribute("y1",	pos);
-          obj.setAttribute("y2",	pos);
-
-          rgb[slideChoice]	=	100-pos;
-
-          var	colorStr	=	"rgb("	+	rgb[0]	+	"%,"	+
-          rgb[1]	+	"%,"	+	rgb[2]	+	"%)";
-          obj	=	document.getElementById("shirt");
-          obj.style.setProperty("fill",	colorStr,	null);
-        }
-    }
+      function	svgSetShirtColor(which,	percent)	{
+      		var	obj;
+      		var	colorStr;
+      		var	newText;
+      		if	(percent	<	0)	{	percent	=	0;	}
+      		if	(percent	>	100)	{	percent	=	100;	}
+      		obj	=	document.getElementById("slide"	+	which);
+      		obj.setAttribute("y1",	100	-	percent);
+      		obj.setAttribute("y2",	100	-	percent);
+      		rgb[which]	=	percent;
+      		colorStr	=	"rgb("	+	rgb[0]	+	"%,"	+
+      				rgb[1]	+	"%,"	+	rgb[2]	+	"%)";
+      		obj	=	document.getElementById("shirt");
+      		obj.style.setProperty("fill",	colorStr,	null);
+      }
     ]]>
     </script>
 
@@ -145,7 +171,7 @@
 
   <!-- draw the shirt -->
   <g id="shirt">
-    <use	xlink:href="#shirt-outline"	x="0"	y="0"/>
+    <use	xlink:href="#shirt-outline"	x="0"	y="0" />
   </g>
 
   <!-- draw the three buttons -->
