@@ -1,0 +1,146 @@
+<!--              Author: Richard Myatt
+                  Date: 14 October 2018
+
+                  An example of the use of a custom SVGEllemnet object based on
+                  a similar example in chapter 14 of 'SVG Essentials' by J.
+                  David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/animval.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG Using SVGEllement Objects</title>
+</head>
+<body>
+
+  <h1>SVG Using SVGEllement Objects</h1>
+
+  <svg width="500" height="400" viewBox="0 0 500 400"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" onload="run()">
+    <title>Using SVGEllement Objects</title>
+
+    <!-- svg definitions -->
+    <defs>
+
+      <!-- define the script for the demo -->
+      <script type="application/ecmascript">
+      <![CDATA[
+
+        function run() {
+
+          // set textContent
+          var	doc	=	document;
+          // el is the SVGElipseEllement object representing the ellisse in the
+          // markup
+          var	el	=	doc.getElementById("el");
+
+          // el.getAttribute("rx") returns the sting value of the attribute with
+          // the units in the markup
+          doc.getElementById("getRx").textContent	=	el.getAttribute("rx");
+          doc.getElementById("getRy").textContent	=	el.getAttribute("ry");
+
+          // el.rx.baseVal.value is the rx value converted to a number in user
+          // units
+          doc.getElementById("rxBase").textContent	=	el.rx.baseVal.value;
+          doc.getElementById("ryBase").textContent	=	el.ry.baseVal.value;
+
+          // el.rx.baseVal.valueAsString is the rx value converted to a number
+          // in user units
+          doc.getElementById("rxBaseString").textContent	=
+          	el.rx.baseVal.valueAsString;
+
+          // el.ry.baseVal.valueInSpecifiedUnits 	is	the	value	of the
+          // attribute	as	a	number,	but	in	the	units	used	when	the
+          // attribute	was	set.
+          doc.getElementById("ryBaseUnits").textContent	=
+          	el.ry.baseVal.valueInSpecifiedUnits;
+
+            // The	 convertToSpecifiedUnits(unitConstant) 	method can	be	used
+            // to	convert	the	value	to	any	unit	you	choose (in	this	case,
+            // em s).	The	method	doesn’t	return	anything directly,	but	the
+            // data	object’s	 valueAsString 	and valueInSpecifiedUnits
+            // properties	will	be	changed.	The value 	property	(which	is
+            // always	in	user	units)	isn’t affected.
+            el.rx.baseVal.convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_EMS);
+
+          // el.rx.baseVal.valueAsString is the complete string, with units
+          doc.getElementById("rxBaseUnits").textContent	=
+          		el.rx.baseVal.valueAsString;
+
+          // begin the animation
+          var	animate	=	doc.getElementById("animation");
+          try	{
+          		animate.beginElement();	//start	the	animation
+          }	catch(e){/*	catch	exception	if	animation	not	supported	*/}
+
+          setTimeout(getAnimatedValue,	1000);
+
+          function	getAnimatedValue()	{
+          		try	{
+          				animate.endElement();	//freeze	the	animation
+          		}	catch(e){}
+          		doc.getElementById("rxAnim").textContent	=	el.rx.animVal.value;
+          		doc.getElementById("ryAnim").textContent	=	el.ry.animVal.value;
+          }
+
+        }
+
+      ]]>
+      </script>
+
+    </defs>
+
+    <!-- provide a white backbround -->
+    <rect x="0" y="0" width="100%" height="100%"
+      style="fill: #fff; stroke: none;" />
+
+    <!-- animate an ellipse -->
+    <ellipse	id="el"	cx="50%"	cy="40"	rx="40%"	ry="1em"
+      style="fill: blue; stroke: none;">
+			<animate	id="animation"	attributeName="rx"	to="20%"
+					begin="indefinite"	dur="2s"	fill="freeze"/>
+    </ellipse>
+
+    <!-- markup for text output -->
+    <text	y="4em">
+			<tspan	x="1em"	dy="1.5em">getAttribute("rx"):</tspan>
+							<tspan	x="60%"	id="getRx"/>
+			<tspan	x="1em"	dy="1.5em">getAttribute("ry"):</tspan>
+							<tspan	x="60%"	id="getRy"/>
+			<tspan	x="1em"	dy="1.5em">rx.baseVal.value:</tspan>
+							<tspan	x="60%"	id="rxBase"/>
+			<tspan	x="1em"	dy="1.5em">ry.baseVal.value:</tspan>
+							<tspan	x="60%"	id="ryBase"/>
+			<tspan	x="1em"	dy="1.5em">rx.baseVal.valueAsString:</tspan>
+							<tspan	x="60%"	id="rxBaseString"/>
+			<tspan	x="1em"	dy="1.5em">ry.baseVal.valueInSpecifiedUnits:</tspan>
+              <tspan	x="60%"	id="ryBaseUnits"/>
+      <tspan	style="font-weight:bold;"	x="1em"	dy="2.5em">After
+              rx.baseVal.convertToSpecifiedUnits():</tspan>
+      <tspan	x="1em"	dy="1.5em">rx.baseVal.valueAsString:</tspan>
+              <tspan	x="60%"	id="rxBaseUnits"/>
+      <tspan	style="font-weight:bold;"	x="1em"	dy="2.5em">After
+              approx.	1	second	of	animation:</tspan>
+      <tspan	x="1em"	dy="1.5em">rx.animVal.value:</tspan>
+              <tspan	x="60%"	id="rxAnim"/>
+      <tspan	x="1em"	dy="1.5em">ry.animVal.value:</tspan>
+              <tspan	x="60%"	id="ryAnim"/>
+    </text>
+
+  </svg>
+
+  <div class="notes">
+    <p>SVG provides a number of custom objects for querying the state of a graphic ellement and converting units from one value to another.  This is an example of the use of the SVGEllipseEllement object to obtain values relating to an ellipse both before and during an animation.  This example can be compared with that of the SVG Simple Script Example at https://code.sololearn.com/Wc0Lj5N9uusy/#html.</p>
+
+    <p>This example is based on a similar example in chapter 14 of 'SVG Essentials' by J. David Eisenberg.</p>
+
+    <p>Please see accompanying code.</p>
+  </div>
+
+</body>
+</html>
