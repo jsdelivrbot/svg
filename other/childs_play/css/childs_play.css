@@ -1,15 +1,23 @@
 /*              Author: Richard Myatt
                 Date: 18 October 2018
+                Revised 22 October 2018 - script added for dynamic resizing
 
                 An experiment with the import of an external svg with built in
                 script put together with the help of inkscape.
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: lightyellow;
 }
 
 .container {
-  width: 60vw;
+  width: 150vh;
+  height: 100vh;
   margin: 0 auto;
 }
