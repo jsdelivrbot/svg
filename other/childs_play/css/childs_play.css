@@ -1,0 +1,15 @@
+/*              Author: Richard Myatt
+                Date: 18 October 2018
+
+                An experiment with the import of an external svg with built in
+                script put together with the help of inkscape.
+*/
+
+body {
+  background-color: lightyellow;
+}
+
+.container {
+  width: 60vw;
+  margin: 0 auto;
+}
