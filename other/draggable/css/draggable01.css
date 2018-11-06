@@ -1,0 +1,15 @@
+/*                Author: Richard Myatt
+                  Date: 6 November 2018
+
+                  An example of how an svg rectangle can be dragged using the
+                  mouse.  This example is based on a tutorial by Peter
+                  Collinridge at http://www.petercollingridge.co.uk/tutorials/svg/interactive/dragging/
+*/
+
+.draggable {
+  cursor: move;
+}
+
+.static {
+  cursor: not-allowed;
+}
