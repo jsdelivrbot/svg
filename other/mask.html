@@ -1,0 +1,117 @@
+<!--              Author: Richard Myatt
+                  Date: 3 November 2018
+
+                  Experimenting with svg mask.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/mask.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mask</title>
+</head>
+<body>
+
+  <!-- put a container around our svg -->
+  <div class="container">
+    <svg id="pic" width="100%" height="100%" viewBox="0 0 300 200"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      onload="run()">
+
+      <defs>
+
+        <mask id="portMask">
+          <rect x="0" y="0" width="300" height="200"
+            style="fill: #555555; stroke: none;" />
+          <circle id="port" cx="150" cy="100" r="50"
+            style="fill: #fff; stroke: none;" />
+        </mask>
+
+        <script type="application/ecmascript">
+            <![CDATA[
+
+              function run() {
+
+                // get references to svg and to the dot
+               var svgEl = document.querySelector("#pic");
+               var portEl = document.querySelector("#port");
+               var guideEl = document.querySelector("#guide");
+
+               // create and svg point
+               var pt = svgEl.createSVGPoint();
+
+               // variable constants
+                var isMouseDown = false;
+                var initialP
+                var initialX;
+                var initialY;
+                var portX = 150;
+                var portY = 100;
+                var start;
+
+                function setMouseDown(evt) {
+                  // set isMouseDown to true
+                  isMouseDown = true;
+
+                  // find the start position
+                  pt.x = evt.clientX;
+                  pt.y = evt.clientY;
+
+                  initialP = pt.matrixTransform(svgEl.getScreenCTM().inverse());
+
+                  initialX = initialP.x;
+                  initialY = initialP.y;
+
+
+                }
+
+                function setMouseUp(evt) {
+                  // set isMouseDown to true
+                  isMouseDown = false;
+                }
+
+                function movePort(evt) {
+                  // set point at mouse position
+                  pt.x = evt.clientX;
+                  pt.y = evt.clientY;
+
+                  // obtain local coordinates within the svg
+                  var positionP = pt.matrixTransform(svgEl.getScreenCTM().inverse());
+
+                  // move port
+                  if(isMouseDown) {
+                    portEl.setAttribute("cx", positionP.x);
+                    portEl.setAttribute("cy", positionP.y);
+                    guideEl.setAttribute("cx", positionP.x);
+                    guideEl.setAttribute("cy", positionP.y);
+                  }
+                }
+
+                guideEl.addEventListener("mousedown", setMouseDown);
+                guideEl.addEventListener("mouseup", setMouseUp);
+                svgEl.addEventListener("mousemove", movePort);
+            }
+         ]]>
+        </script>
+
+      </defs>
+
+      <image id="bg" xlink:href="https://drive.google.com/uc?id=1iQkVSFW4OKqnAeiitxQt1rW582q5PUBG"
+        x="0" y="0" width="300" height="200"
+        style="mask: url(#portMask);" />
+
+      <circle id="guide" cx="150" cy="100" r="50"
+        style="fill: none; stroke: none;" />
+
+    </svg>
+
+  </div>
+
+  <script src="js/mask.js"></script>
+
+</body>
+</html>

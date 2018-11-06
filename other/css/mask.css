@@ -1,0 +1,30 @@
+/*                Author: Richard Myatt
+                  Date: 3 November 2018
+
+                  Experimenting with svg mask.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fefefe;
+}
+
+.container {
+  width: 150vh;
+  height: 100vh;
+  margin: 5vh auto;
+}
+
+#guide {
+  visibility: visible;
+  pointer-events: visible;
+}
+
+#guide:hover {
+  cursor: pointer;
+}
