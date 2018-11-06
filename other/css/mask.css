@@ -1,7 +1,7 @@
 /*                Author: Richard Myatt
                   Date: 3 November 2018
 
-                  Experimenting with svg mask.
+                  Revised 6 November 2018 - svg mask demo.
 */
 
 * {
@@ -18,6 +18,8 @@ body {
   width: 150vh;
   height: 100vh;
   margin: 5vh auto;
+  -webkit-box-shadow: 5px 8px 3px #888;
+          box-shadow: 5px 8px 3px #888;
 }
 
 #guide {

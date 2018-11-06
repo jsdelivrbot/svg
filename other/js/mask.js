@@ -1,8 +1,7 @@
 /*                Author: Richard Myatt
                   Date: 3 November 2018
 
-                  Experimenting with svg mask.
-                  https://codepen.io/noeldelgado/pen/ByxQjL
+                  Revised 6 November 2018 - svg mask demo.
 */
 
 document.addEventListener('DOMContentLoaded', function() {
