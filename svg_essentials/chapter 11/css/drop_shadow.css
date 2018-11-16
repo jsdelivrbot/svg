@@ -1,0 +1,25 @@
+/*               Author: Richard Myatt
+                  Date: 16 November 2018
+
+                  An example of the use of filters to produce drop shadow effects
+                  within an svg image.  This example is based on a similar example
+                  in chapter 11 of 'SVG Essentials' by J. David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg, .notes {
+  margin-left: 20px;
+}
+
+.notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
