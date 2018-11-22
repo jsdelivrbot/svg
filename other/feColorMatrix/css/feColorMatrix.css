@@ -1,0 +1,51 @@
+/*                Author: Richard Myatt
+                  Date: 21 November 2018
+
+                  Using the SVG feColorMatrix.  Various examples partly based on
+                  https://alistapart.com/article/finessing-fecolormatrix
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 50vw;
+  height: 37.5vw;
+  margin: 50px auto;
+}
+
+img#pic {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: url(#identity);
+          filter: url(#identity);
+}
+
+body {
+  background-color: #888;
+}
+
+#cap {
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .container {
+    width: 70vw;
+    height: 52.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 90vw;
+    height: 67.5vw;
+  }
+}

@@ -1,0 +1,244 @@
+<!--              Author: Richard Myatt
+                  Date: 21 November 2018
+
+                  Using the SVG feColorMatrix.  Various examples partly based on
+                  https://alistapart.com/article/finessing-fecolormatrix
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/feColorMatrix.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using the feColorMatrix filter</title>
+</head>
+<body>
+
+  <!-- image and container -->
+  <div class="container">
+    <img id="pic" src="images/beach-clouds.jpg" alt="beach clouds">
+  </div>
+
+  <!-- caption -->
+  <h3 id="cap">Original Image</h3>
+
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- preserve the original image -->
+  	<filter id="identity">
+  		<feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+		</filter>
+
+    <!-- darkening and lightening -->
+
+    <filter id="darken">
+      <feColorMatrix type="matrix"
+      values="0.5 0 0 0 0
+              0 0.5 0 0 0
+              0 0 0.5 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <filter id="lighten">
+      <feColorMatrix type="matrix"
+      values="1.5 0 0 0 0
+              0 1.5 0 0 0
+              0 0 1.5 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- desaturate by 50% -->
+  	<filter id="desaturate-half">
+  		<feColorMatrix type="saturate"
+      values="0.5" />
+		</filter>
+
+    <!-- desaturate by 100% -->
+  	<filter id="desaturate-full">
+  		<feColorMatrix type="saturate"
+      values="0" />
+		</filter>
+
+    <!-- hue rotate 180 deg -->
+  	<filter id="hue-rotate">
+  		<feColorMatrix type="hueRotate"
+      values="180" />
+		</filter>
+
+    <!-- hue rotate 180 deg -->
+  	<filter id="lum2alpha">
+  		<feColorMatrix type="luminanceToAlpha" />
+		</filter>
+
+    <!-- lacking the B and G channels (only R at 1) -->
+  	<filter id="red">
+  		<feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 0 0 0 0
+              0 0 0 0 0
+              0 0 0 1 0" />
+		</filter>
+
+    <!-- lacking the R and B channels (only G at 1) -->
+  	<filter id="green">
+  		<feColorMatrix type="matrix"
+      values="0 0 0 0 0
+              0 1 0 0 0
+              0 0 0 0 0
+              0 0 0 1 0" />
+		</filter>
+
+    <!-- lacking the R and G channels (only B at 1) -->
+  	<filter id="blue">
+  		<feColorMatrix type="matrix"
+      values="0 0 0 0 0
+              0 0 0 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+		</filter>
+
+    <!-- lacking the B channel (mix of R and G)
+    Red + Green = Yellow -->
+  	<filter id="yellow">
+  		<feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 0 0 0
+              0 0 0 1 0" />
+		</filter>
+
+    <!-- lacking the G channel (mix of R and B)
+    Red + Blue = Magenta -->
+    <filter id="magenta">
+      <feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 0 0 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- lacking the R channel (mix of G and B)
+    Green + Blue = Cyan -->
+    <filter id="cyan">
+      <feColorMatrix type="matrix"
+      values="0 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- greyscale -->
+
+    <filter id="mono-red">
+      <feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              1 0 0 0 0
+              1 0 0 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <filter id="mono-green">
+      <feColorMatrix type="matrix"
+      values="0 1 0 0 0
+              0 1 0 0 0
+              0 1 0 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <filter id="mono-blue">
+      <feColorMatrix type="matrix"
+      values="0 0 1 0 0
+              0 0 1 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- filters which use the alpha values -->
+
+    <!-- acts like an opacity filter at 0.5 -->
+    <filter id="alpha">
+      <feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 0.5 0" />
+    </filter>
+
+    <!-- inclreases green opacity to be
+          on the same level as overall opacity -->
+    <filter id="hard-green">
+      <feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 1 0 1 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <filter id="hard-yellow">
+      <feColorMatrix type="matrix"
+      values="1 0 0 1 0
+              0 1 0 1 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- blue shadow, magenta highlight -->
+    <filter id="blue-shadow-magenta-highlight">
+      <feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 0 0 0 0
+              0 0 1 1 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- eliminate the blue -->
+    <filter id="elim-blue">
+      <feColorMatrix type="matrix"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 -2 1 0" />
+    </filter>
+
+    <!-- no G channel, Red is at 100% on the G channel, so the G channel looks
+    Red (luminosity of G channel lost) -->
+    <filter id="no-g-red">
+      <feColorMatrix type="matrix"
+      values="1 1 0 0 0
+              0 0 0 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- no G channel, Red and Blue is at 100% on the R and B channels, so the G
+         channel looks Magenta (luminosity of G channel lost) -->
+    <filter id="no-g-magenta">
+      <feColorMatrix type="matrix"
+      values="1 1 0 0 0
+              0 0 0 0 0
+              0 1 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+    <!-- G channel shared by red and blue values.  This is a colorized
+         magenta effect (luminosity maintained) -->
+    <filter id="yes-g-colorized-magenta">
+      <feColorMatrix type="matrix"
+      values="1 1 0 0 0
+              0 1 0 0 0
+              0 1 1 0 0
+              0 0 0 1 0" />
+    </filter>
+
+  </svg>
+
+  <script src="js/feColorMatrix.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+/*                Author: Richard Myatt
+                  Date: 22 November 2018
+
+                  Using the SVG feComponentTransfer filter.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 50vw;
+  height: 33.33vw;
+  margin: 50px auto;
+}
+
+img#pic {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: url(#identity);
+          filter: url(#discrete);
+}
+
+body {
+  background-color: #888
+}
+
+#cap {
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .container {
+    width: 70vw;
+    height: 52.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 90vw;
+    height: 67.5vw;
+  }
+}
