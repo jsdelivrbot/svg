@@ -1,0 +1,52 @@
+<!--              Author: Richard Myatt
+                  Date: 4 December 2018
+
+                  SVG filters used to simulate a metal plate.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/industrial.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train</title>
+</head>
+<body>
+
+  <div class="container">
+    <img class="photo" src="images/train.jpg" alt="train">
+  </div>
+
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+
+      <filter id="metal" filterUnits="userSpaceOnUse">
+        <feComponentTransfer result="inverted">
+         <feFuncR type="table" tableValues="1 0" />
+         <feFuncG type="table" tableValues="1 0" />
+         <feFuncB type="table" tableValues="1 0" />
+        </feComponentTransfer>
+
+        <feColorMatrix type="luminanceToAlpha" in="inverted" result="negative" />
+
+        <feDiffuseLighting	in="negative"
+					lighting-color="#fff"
+					surfaceScale="10"
+					diffuseConstant="1"
+					result="diffuseOutput">
+
+          <fePointLight	x="100"	y="-100"	z="150"/>
+        </feDiffuseLighting>
+
+      </filter>
+
+    </defs>
+
+  </svg>
+
+
+</body>
+</html>
