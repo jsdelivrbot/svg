@@ -15,38 +15,45 @@
 </head>
 <body>
 
+  <!-- provide a container for our subject -->
   <div class="container">
-    <img class="photo" src="images/train.jpg" alt="train">
+
+    <svg width="100%" height="100%"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Metal plaque</title>
+
+      <!-- define the filter -->
+      <defs>
+
+        <filter id="metal" filterUnits="userSpaceOnUse">
+          <feComponentTransfer result="inverted">
+           <feFuncR type="table" tableValues="1 0" />
+           <feFuncG type="table" tableValues="1 0" />
+           <feFuncB type="table" tableValues="1 0" />
+          </feComponentTransfer>
+
+          <feColorMatrix type="luminanceToAlpha" in="inverted" result="negative" />
+
+          <feDiffuseLighting	in="negative"
+  					lighting-color="#fff"
+  					surfaceScale="10"
+  					diffuseConstant="1"
+  					result="diffuseOutput">
+
+            <fePointLight	x="100"	y="-100"	z="150"/>
+          </feDiffuseLighting>
+
+        </filter>
+
+      </defs>
+
+      <!-- import the image and attach the filter -->
+      <image xlink:href="https://cdn.jsdelivr.net/gh/aronnax77/svg/other/industrial_plaque/images/train.jpg"
+        width="100%" height="100%" filter="url(#metal)" />
+
+    </svg>
   </div>
-
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-    <defs>
-
-      <filter id="metal" filterUnits="userSpaceOnUse">
-        <feComponentTransfer result="inverted">
-         <feFuncR type="table" tableValues="1 0" />
-         <feFuncG type="table" tableValues="1 0" />
-         <feFuncB type="table" tableValues="1 0" />
-        </feComponentTransfer>
-
-        <feColorMatrix type="luminanceToAlpha" in="inverted" result="negative" />
-
-        <feDiffuseLighting	in="negative"
-					lighting-color="#fff"
-					surfaceScale="10"
-					diffuseConstant="1"
-					result="diffuseOutput">
-
-          <fePointLight	x="100"	y="-100"	z="150"/>
-        </feDiffuseLighting>
-
-      </filter>
-
-    </defs>
-
-  </svg>
-
 
 </body>
 </html>

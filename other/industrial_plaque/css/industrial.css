@@ -4,20 +4,18 @@
                   SVG filters used to simulate a metal plate.
 */
 
+body {
+  background-color: #888;
+}
+
 .container {
   width: 50vw;
   height: 30.12vw;
   margin: 50px auto;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
-
-img {
-  -webkit-filter: url(#metal);
-          filter: url(#metal);
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 8px 3px #333;
+          box-shadow: 5px 8px 3px #333;
 }
 
 @media only screen and (max-width: 1200px) {
