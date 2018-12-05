@@ -10,6 +10,7 @@ body {
 
 .container {
   width: 40vw;
+  height: 32.73vw;
   margin: 20px auto;
   border-radius: 15px;
   overflow: hidden;
@@ -21,6 +22,7 @@ body {
 
   .container {
     width: 60vw;
+    height: 49.1vw;
   }
 }
 
@@ -28,5 +30,6 @@ body {
 
   .container {
     width: 95vw;
+    height: 77.87vw;
   }
 }
