@@ -11,6 +11,6 @@ body {
   background-color: pink;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("https://cdn.rawgit.com/aronnax77/svg/617ff4f6/collection/ship.svg");
+  background-image: url("https://cdn.jsdelivr.net/gh/aronnax77/svg@617ff4f6/collection/ship.svg");
   background-size: contain;
 }
